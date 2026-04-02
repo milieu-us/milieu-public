@@ -29,9 +29,9 @@ The first experience is an **initial encounter**, not a full session or predefin
 
 ---
 
-## Value (MVE Scope)
+## Experience Value (MVE Scope)
 
-This decision prioritizes value as **emergent experience** rather than predefined outcomes.
+This decision prioritizes **emergent experience** rather than predefined outcomes.
 
 The MVE creates value by enabling participants to:
 
@@ -391,7 +391,6 @@ Such framing is optional and should not constrain future experiences.
 
 ## Related
 
-- DR-GOV-000 — Minimum Viable Governance
-- DR-PRISMAL-SPACE-000 — Prismal Space: Current View and Open Questions
-- REF-PRISMAL-INTERACTION-000 — Prismal Interaction
-
+- DECISION-MVM-000 — Minimum Viable Milieu (MVM)
+- REFERENCE-PRISMAL-SPACE-000 — Prismal Space: Current View and Open Questions
+- REFERENCE-PRISMAL-INTERACTION-000 — Prismal Interaction
