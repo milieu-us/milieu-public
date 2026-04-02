@@ -18,7 +18,7 @@ Current experience work is especially interested in:
 - shared meaning that emerges through participation
 - archives that support return, reinterpretation, and continuation
 
-If you like roleplay, improv, tabletop play, fantasy settings, or actual play, the Experience documents are usually the best place to start.
+If you like roleplay, improv, tabletop play, fictional settings, or actual play, the Experience documents are usually the best place to start.
 
 ## Start Here
 
