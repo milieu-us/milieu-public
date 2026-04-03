@@ -3,7 +3,7 @@
 ID: RECORD-000 \
 Status: Working Draft \
 Created: 2026-03-12 \
-Updated: 2026-03-31
+Updated: 2026-04-03
 
 ## Intent
 
@@ -59,9 +59,25 @@ A descriptive filename suffix may be added for readability.
 
 Example:
 
-- `RECORD-000-milieu-record-system.md`
+- `RECORD-000-Milieu-Record-System.md`
 
 The descriptive suffix is not part of the canonical identifier and may change without changing record identity.
+
+### Filename Conventions
+
+Filenames SHOULD prioritize readability and ease of use for both human agents and AI agents.
+
+- Use Title Case for readability and scan speed
+- Use hyphens (`-`) consistently as separators
+- Avoid special punctuation (e.g., em-dashes, en-dashes)
+- Avoid characters that are difficult to type on standard keyboards
+
+The canonical identity of a record is its ID (e.g., REFERENCE-PRISMAL-001).  
+The filename is a human-readable affordance and may change without affecting identity.
+
+The descriptive portion of the filename SHOULD match the record title.
+
+Shortened forms MAY be used when necessary, provided meaning remains clear.
 
 ### Representation
 
