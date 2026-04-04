@@ -11,11 +11,24 @@ Records preserve shared understanding over time for human, AI, system, and futur
 
 The record system should remain usable without requiring a dedicated curator.
 
+Intent is expressed as a section within the document body.
+
+It is deliberately not defined as metadata.
+
 ## Context
 
 Milieu requires a durable, lightweight record system for constitutional, policy, decision, architecture, and related records. The system should remain clear to human readers, easy for agents to parse, and flexible enough to evolve without unnecessary structural overhead.
 
 This record defines the minimal initial structure of the Milieu record system.
+
+### Language as First-Class Structure
+
+As Records are designed to be readable and interpretable by both human agents and AI agents, language is treated as a first-class reasoning medium, not merely a container for structured data.
+
+As such:
+
+Key elements (such as Intent) are expressed within the document body
+These elements are meant to be read and interpreted, not only parsed
 
 ## Decision
 
@@ -110,6 +123,13 @@ Records should include an `Intent` section near the beginning.
 The Intent section briefly states why the record exists.
 
 Intent should remain short and clear.
+
+Intent serves as:
+
+a shared statement of purpose
+an anchor for interpretation of the entire record
+
+Keeping Intent in the body preserves its role in reasoning and shared understanding across agents.
 
 ### Optional and Conditional Elements
 
