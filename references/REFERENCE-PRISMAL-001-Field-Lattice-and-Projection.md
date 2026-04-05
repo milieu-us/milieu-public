@@ -2,7 +2,12 @@
 
 ## Field, Lattice, and Projection — Working Model
 
-### Intent
+ID: REFERENCE-PRISMAL-001
+Status: Working Draft
+Created: 2026-04-03
+Updated: 2026-04-04
+
+## Intent
 Capture an emerging framing for how continuous space, discrete simulation, and computational representations relate within Prismal work.
 
 This is a working model. It is not a decision and remains subject to revision.
