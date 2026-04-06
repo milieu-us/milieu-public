@@ -30,6 +30,12 @@ As such:
 Key elements (such as Intent) are expressed within the document body
 These elements are meant to be read and interpreted, not only parsed
 
+### Canonical Form and Convergence
+
+Records are preserved in a canonical form.
+
+Agents interacting with records may operate on intermediate or variant representations, but must converge to the canonical form before preservation.
+
 ## Decision
 
 Milieu records and artifacts use a minimal shared structure with metadata or optional formal schema.
