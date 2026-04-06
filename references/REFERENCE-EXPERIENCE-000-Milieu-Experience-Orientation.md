@@ -1,11 +1,18 @@
 # REFERENCE-EXPERIENCE-000 - Milieu Experience Orientation
 
 **Status**: Working Draft\
-**Intent**: Preserve the core conceptual orientation of Milieu Experiences so they remain stable across implementation, tooling, and team evolution.
+**Created:** 2026-03-21\
+**Updated:** 2026-04-05
 
 ---
 
-## 1. Purpose
+## Intent
+
+Preserve the core conceptual orientation of Milieu Experiences so they remain stable across implementation, tooling, and team evolution.
+
+---
+
+## Purpose
 
 This document captures a **way of seeing** Milieu Experiences.
 
@@ -21,7 +28,7 @@ It exists to:
 
 ---
 
-## 2. Why This Exists (Context for New Readers)
+## Why This Exists (Context for New Readers)
 
 Most digital experiences today assume:
 
@@ -50,15 +57,15 @@ This document exists to support:
 
 ---
 
-## 3. Core Orientation
+## Core Orientation
 
 Milieu crafts experiences where agents (people, AI, and systems) participate together in shared space. In a Milieu experience, time, meaning, and even what is considered "real" emerges from that participation. These experiences can later be revisited, reinterpreted, and continued.
 
 ---
 
-## 4. Foundational Principles
+## Foundational Principles
 
-### 3.1 Agents are defined by participation, not implementation
+### Agents are defined by participation, not implementation
 
 Agents include:
 
@@ -80,7 +87,7 @@ But:
 
 ---
 
-### 3.2 Threads are lived experiences, not recordings
+### Threads are lived experiences, not recordings
 
 A thread is:
 
@@ -98,7 +105,7 @@ But:
 
 ---
 
-### 3.3 Time unfolds through participation
+### Time unfolds through participation
 
 Time is not a single, always-running timeline.
 
@@ -115,7 +122,7 @@ But:
 
 ---
 
-### 3.4 Shared space anchors reality; time is contextual
+### Shared space anchors reality; time is contextual
 
 - Places are consistent and recognizable
 - Time can differ between groups and experiences
@@ -130,7 +137,7 @@ But:
 
 ---
 
-### 3.5 Multiple valid realities can coexist
+### Multiple valid realities can coexist
 
 - Different groups may experience different versions of events
 - No single timeline defines an entire reality
@@ -145,7 +152,7 @@ But:
 
 ---
 
-### 3.6 Convergence creates shared memory
+### Convergence creates shared memory
 
 - Sometimes, multiple groups come together in the same place and moment
 - These events create strong, shared memories across groups
@@ -160,7 +167,7 @@ But:
 
 ---
 
-### 3.7 Archive enables re-entry and reinterpretation
+### Archive enables re-entry and reinterpretation
 
 Archives are not just recordings of the past.
 
@@ -179,7 +186,7 @@ But:
 
 ---
 
-### 3.8 Meaning is preserved over fidelity
+### Meaning is preserved over fidelity
 
 Systems and formats will change over time.
 
@@ -198,7 +205,7 @@ But:
 
 ---
 
-### 3.9 Threads belong to those who lived them
+### Threads belong to those who lived them
 
 - Participants may carry, store, and re-host threads
 - Persistence is shared, not centralized
@@ -213,7 +220,7 @@ But:
 
 ---
 
-### 3.10 Protocols enable composition across groups
+### Protocols enable composition across groups
 
 - Protocols are shared patterns for how groups interact and coordinate
 - They allow small groups to come together to share larger, meaningful events
@@ -229,7 +236,7 @@ But:
 
 ---
 
-## 5. Key Concepts (Plain Language)
+## Key Concepts (Plain Language)
 
 These are simple definitions to help new readers understand the system:
 
@@ -263,7 +270,7 @@ Returning to a past moment and experiencing it again—possibly in a different w
 
 ---
 
-## 6. Design Orientation (What We Optimize For)
+## Design Orientation (What We Optimize For)
 
 Milieu does not optimize for:
 
@@ -280,7 +287,7 @@ Milieu optimizes for:
 
 ---
 
-## 7. Misinterpretation Guards (Common Confusions)
+## Misinterpretation Guards (Common Confusions)
 
 ### Threads are not logs
 
@@ -307,13 +314,13 @@ Shared anchors, convergence events, and lineage maintain coherence.
 
 ---
 
-## 8. Enduring Principle
+## Enduring Principle
 
 > Preserve meaning first. Allow interpretation to evolve.
 
 ---
 
-## 9. Closing
+## Closing
 
 This document is expected to evolve or be replaced.
 

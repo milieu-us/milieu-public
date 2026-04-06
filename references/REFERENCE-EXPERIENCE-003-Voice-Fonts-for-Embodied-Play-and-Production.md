@@ -1,19 +1,19 @@
-## PROPOSAL-EXPERIENCE-000-Voice-Fonts-for-Embodied-Play-and-Production
+# REFERENCE-EXPERIENCE-003-Voice-Fonts-for-Embodied-Play-and-Production
 
-### Voice Fonts for Embodied Play and Production
+## Voice Fonts for Embodied Play and Production
 
 **Status:** Proposal / For Pilot\
-**Date:** 2026-04-01\
+**Created:** 2026-04-01\
+**Updated:** 2026-04-05\
 **Domain:** Experience (Minimum Viable Experience)\
 **Related:**
-
-- REF-EXP-000 — Impro: Embodied Play and Improvisation
+- REFERENCE-EXPERIENCE-001 — Impro: Embodied Play and Improvisation
 - MVE facilitation and interaction design
 - Voice & Identity Policy (forthcoming)
 
 ---
 
-# Intent
+## Intent
 
 Explore whether **voice transformation (“voice fonts”)** can enhance embodied play and production quality **without reducing spontaneity, agency, or safety**.
 
@@ -21,7 +21,7 @@ This proposal defines a **small pilot experiment**, not a long-term commitment o
 
 ---
 
-# Proposal Summary
+## Proposal Summary
 
 Participants perform live using their natural voice.
 
@@ -38,7 +38,7 @@ This approach aims to combine:
 
 ---
 
-# Why This Matters (Experience Alignment)
+## Why This Matters (Experience Alignment)
 
 Voice is a primary signal in embodied interaction. It carries:
 
@@ -68,7 +68,7 @@ Participants do not need specialized voice acting skills to explore diverse role
 
 ---
 
-# Role-State Signaling (Capture Requirement)
+## Role-State Signaling (Capture Requirement)
 
 Participants must be able to explicitly indicate when they are speaking **in-character**.
 
@@ -98,7 +98,7 @@ This becomes part of the **authoritative interaction record**.
 
 ---
 
-# How It Works (Pilot Flow)
+## How It Works (Pilot Flow)
 
 1. **Live Session**
 
@@ -121,7 +121,7 @@ This becomes part of the **authoritative interaction record**.
 
 ---
 
-# Early Cost Signal (Provisional)
+## Early Cost Signal (Provisional)
 
 Initial testing suggests:
 
@@ -134,83 +134,83 @@ These are **early estimates**. The pilot will establish actual usage.
 
 ---
 
-# Constraints and Guardrails
+## Constraints and Guardrails
 
-## No Voice Cloning
+### No Voice Cloning
 
 - Do not replicate identifiable real voices
 - Use only:
   - synthetic voices
   - licensed/generated profiles
 
-## Participant Awareness
+### Participant Awareness
 
 Participants must understand:
 
 - their voice is being transformed
 - how the output will be used
 
-## Identity Integrity
+### Identity Integrity
 
 Voice transformation must not:
 
 - misrepresent participants
 - remove authorship or agency
 
-## Reversibility
+### Reversibility
 
 Raw audio remains available as ground truth.
 
 ---
 
-# Open Questions
+## Open Questions
 
 The pilot should help answer:
 
-## Experience Quality
+### Experience Quality
 
 - Does transformation preserve emotional nuance?
 - Does it enhance or reduce embodiment?
 
-## Interaction Flow
+### Interaction Flow
 
 - Does push-to-talk interrupt immersion?
 - Does it become a natural “enter role” signal?
 
-## Social Dynamics
+### Social Dynamics
 
 - Does voice transformation affect:
   - status signaling?
   - turn-taking?
   - group cohesion?
 
-## Tooling Practicality
+### Tooling Practicality
 
 - How much setup is required per character?
 - Can workflows be made repeatable?
 
-## Cost Reality
+### Cost Reality
 
 - What is actual usage per session?
 - Where are optimization opportunities?
 
 ---
 
-# Pilot Plan
+## Pilot Plan
 
-## Scope
+### Scope
 
 - Single session (\~3 hours)
 - Small group (5–8 participants)
 
-## Approach
+### Approach
 
 - Capture raw audio + role-state
 - Apply transformation post-session
 - Compare:
   - raw vs transformed outputs
 
-## Evaluation Signals
+### Evaluation Signals
 
 - participant feedback (embodiment, comfort, clarity)
 - audience perception (if applicable)
@@ -219,7 +219,7 @@ The pilot should help answer:
 
 ---
 
-# Success Criteria (Initial)
+## Success Criteria (Initial)
 
 The pilot is successful if:
 
@@ -231,7 +231,7 @@ The pilot is successful if:
 
 ---
 
-# Non-Goals (For Now)
+## Non-Goals (For Now)
 
 - Real-time transformation as a requirement
 - Commitment to a specific vendor
@@ -240,7 +240,7 @@ The pilot is successful if:
 
 ---
 
-# Relationship to Broader Work
+## Relationship to Broader Work
 
 This proposal supports **Minimum Viable Experience (MVE)** and should be evaluated alongside:
 
@@ -253,7 +253,7 @@ Voice fonts are a **supporting layer**, not the core experience.
 
 ---
 
-# Summary
+## Summary
 
 Voice transformation may allow us to:
 
@@ -264,4 +264,3 @@ Voice transformation may allow us to:
 …but only if it **supports embodiment rather than replacing it**.
 
 A small pilot is the appropriate next step.
-
