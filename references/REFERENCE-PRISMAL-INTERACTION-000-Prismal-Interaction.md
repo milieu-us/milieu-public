@@ -3,14 +3,20 @@
 **Status:** Working Paper (Exploratory)\
 **Created:** 2026-03-26\
 **Updated:** 2026-03-26\
-**Intent:** Define the minimum viable interaction model that lets sentients present posture to an oracle, resolve consequence against Prismal state, and update shared experience state without blocking early implementation.\
-**Note:** This is v0 and exploratory. It is long because we do not yet know enough to constrain it. It introduces concepts that may change or be replaced. Terms such as Oracle and Guide are provisional.
+
+## Intent
+
+Define the minimum viable interaction model that lets sentients present posture to an oracle, resolve consequence against Prismal state, and update shared experience state without blocking early implementation.
+
+## Note
+
+This is v0 and exploratory. It is long because we do not yet know enough to constrain it. It introduces concepts that may change or be replaced. Terms such as Oracle and Guide are provisional.
 
 ## Why
 
 We need a thin, buildable interaction model for early Milieu experiments.
 
-&#x20;We have enough shared direction to define a minimum viable slice, but not enough certainty to lock a full theory of energy space, information space, or Prismal Space as a complete simulation framework.
+We have enough shared direction to define a minimum viable slice, but not enough certainty to lock a full theory of energy space, information space, or Prismal Space as a complete simulation framework.
 
 This record exists to provide a stable core that:
 
