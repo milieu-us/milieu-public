@@ -1,10 +1,10 @@
-# DECISION-PRISMAL-000
+# DECISION-PRISMAL-EXPERIMENT-000
 
 ## Prismal Space — Initial Architecture Spike and Layering Constraints
 
-ID: DECISION-PRISMAL-000
-Status: Working Draft
-Created: 2026-04-05
+ID: DECISION-PRISMAL-EXPERIMENT-000\
+Status: Working Draft\
+Created: 2026-04-05\
 Updated: 2026-04-05
 
 ## Intent
@@ -215,6 +215,7 @@ Additionally:
 ## References
 
 - RECORD-000 — Milieu Record System
+- REFERENCE-PRISMAL-000 — Current View and Open Questions
 - REFERENCE-PRISMAL-001 — Field, Lattice, and Projection — Working Model
 - REFERENCE-PRISMAL-002 — Structural Constraints, Joinery as Tests, and Playable Assembly
 - REFERENCE-PRISMAL-DEMO-000 — Planet Biome Demo Proposal
