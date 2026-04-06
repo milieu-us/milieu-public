@@ -1,9 +1,9 @@
 # RECORD-000 — Milieu Record System
 
-ID: RECORD-000 \
-Status: Working Draft \
-Created: 2026-03-12 \
-Updated: 2026-04-03
+- **ID:** RECORD-000
+- **Status:** Working Draft
+- **Created:** 2026-03-12
+- **Updated:** 2026-04-03
 
 ## Intent
 
@@ -38,7 +38,22 @@ Milieu records and artifacts use a minimal shared structure with metadata or opt
 
 A record captures a principle, policy, decision, architecture element,  or other structural artifact so it remains visible and referenceable over time.
 
-### Record Type
+### Record Types, Domains, and Projects
+
+Records are interpreted along multiple orthogonal axes:
+
+Type defines the semantic role of a record (e.g., RECORD, DECISION, REFERENCE)
+Domain describes the area of concern a record relates to (e.g., Operations, Experience)
+Project describes the specific initiative or effort
+
+These axes are independent:
+
+A record has exactly one type
+A record may relate to one or more domains
+A record may belong to a project
+
+Domains and projects are intentionally flexible and may evolve over time.
+Types are fewer and more stable, and are defined in RECORD-001.
 
 Records are grouped by purpose.
 
@@ -49,7 +64,7 @@ Initial record types include:
 - `POLICY-` for operational rules
 - `DECISION-` for strategic direction
 - `ARCHITECTURE-` for implementation structure
-= `REFERENCE-` for reference documentation
+- `REFERENCE-` for reference documentation
 
 Record types use capital-case. Additional record types may be introduced later if needed.
 
@@ -97,6 +112,21 @@ Shortened forms MAY be used when necessary, provided meaning remains clear.
 A record may be represented in one or more formats.
 
 Some record types or subtypes may require a specific representation, a set of allowed representations, or a defined schema.
+
+### Identity and Metadata
+
+The first H1 must contain the record identifier and title.
+
+Records must also include identity metadata for machine-readable parsing and downstream system use.
+
+At minimum, the identity expressed in metadata must match the first H1 exactly.
+
+This duplication is intentional:
+
+the first H1 supports human readability and rendered document scanning
+the metadata block supports reliable parsing by system agents, scripts, and storage pipelines
+
+A mismatch between the first H1 and identity metadata indicates a malformed record and should be treated as a coordination failure to be corrected.
 
 ### Required Metadata
 
