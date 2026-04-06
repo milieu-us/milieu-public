@@ -1,11 +1,9 @@
-# DECISION-PRISMAL-EXPERIMENT-000
+# DECISION-PRISMAL-EXPERIMENT-000 - Prismal Space Experiment — Initial Architecture Spike and Layering Constraints
 
-## Prismal Space — Initial Architecture Spike and Layering Constraints
-
-ID: DECISION-PRISMAL-EXPERIMENT-000\
-Status: Working Draft\
-Created: 2026-04-05\
-Updated: 2026-04-05
+- **ID:** DECISION-PRISMAL-EXPERIMENT-000
+- **Status:** Working Draft
+- **Created:** 2026-04-05
+- **Updated:** 2026-04-05
 
 ## Intent
 
