@@ -6,6 +6,16 @@ It is not a product repository or a game client. Think of it as a public map of 
 
 Contents here are limited to materials appropriate for public sharing and that are not required by law or established policy, including steward judgment, to remain private.
 
+## Local Git Workflow
+
+Use a fresh clone for each person or agent context that contributes to this repository.
+
+- Do not copy an existing working tree or reuse someone else's `.git` directory.
+- Set commit identity in each clone with `git config --local user.name "Your Name"` and `git config --local user.email "you@example.com"`.
+- Verify the effective identity before the first commit with `git config user.name`, `git config user.email`, and `git remote -v`.
+- Prefer `git pull --ff-only` unless you are intentionally creating a local merge.
+- Keep hooks opt-in and visible. If hooks become part of the workflow, they should be documented in the repository rather than living only in machine-local Git config.
+
 ## What Is Milieu?
 
 Milieu is exploring shared experiences where people, AI agents, and systems participate together in world-like spaces.

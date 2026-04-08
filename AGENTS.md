@@ -57,6 +57,18 @@ This follows Milieu's current foundational constraint:
 - When a decision depends on off-repo context, ask for that context or record the assumption being made.
 - Prefer durable repository artifacts for information future agents will need.
 
+## Git Workflow Guidance
+
+Agents contributing changes in this repository should assume the following local Git workflow:
+
+- each person or agent context uses a fresh clone rather than copying an existing working tree
+- each clone sets its own `git config --local user.name` and `git config --local user.email`
+- effective identity should be checked before the first commit with `git config user.name`, `git config user.email`, and `git remote -v`
+- prefer `git pull --ff-only` unless an intentional local merge is part of the task
+- do not rely on hidden machine-local hooks or unpublished Git conventions
+
+If hook-based checks are introduced later, they should be visible in the repository and described in the contributor-facing documentation.
+
 ## Related
 
 - [README.md](README.md)
