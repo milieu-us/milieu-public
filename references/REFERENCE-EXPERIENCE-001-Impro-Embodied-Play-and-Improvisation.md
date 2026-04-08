@@ -1,15 +1,14 @@
-# REFERENCE-EXPERIENCE-001 — Impro: Embodied Play and Improvisation
+# REFERENCE-EXPERIENCE-001 - Impro: Embodied Play and Improvisation
 
-**Status:** Reference / Not Yet Reviewed\
-**Created:** 2026-03-23\
-**Updated:** 2026-04-05\
-**Domain:** Experience
-
----
+- **ID:** REFERENCE-EXPERIENCE-001
+- **Status:** Reference / Not Yet Reviewed
+- **Created:** 2026-03-23
+- **Updated:** 2026-04-05
+- **Domain:** Experience
 
 ## Intent
 
-Capture Keith Johnstone’s work (*Impro: Improvisation and the Theatre*) as an upstream design reference for embodied play, invitation design, relational interaction, and safe role assumption.
+Capture Keith Johnstoneâ€™s work (*Impro: Improvisation and the Theatre*) as an upstream design reference for embodied play, invitation design, relational interaction, and safe role assumption.
 
 This record does not prescribe implementation. It exists to inform future Experience design, evaluation, and experimentation.
 
@@ -19,7 +18,7 @@ This reference is held provisionally and may be revised, expanded, or removed ba
 
 ## Summary
 
-Keith Johnstone’s work on improvisational theatre explores how people enter states of responsive, embodied creativity when social fear and self-censorship are reduced. His exercises and frameworks focus on enabling spontaneous interaction, relational awareness, and emergent narrative through live collaboration.
+Keith Johnstoneâ€™s work on improvisational theatre explores how people enter states of responsive, embodied creativity when social fear and self-censorship are reduced. His exercises and frameworks focus on enabling spontaneous interaction, relational awareness, and emergent narrative through live collaboration.
 
 For Milieu, this work is relevant because it describes mechanisms that allow participants to **enter roles deeply and interact in ways that feel authentic, relational, and meaningful**.
 
@@ -45,14 +44,14 @@ Experiences may benefit from systems that:
 
 ### Offers and Acceptance
 
-Improvisation advances when participants make **offers** — actions or statements that establish new information — and others accept and extend those offers rather than blocking them.
+Improvisation advances when participants make **offers** â€” actions or statements that establish new information â€” and others accept and extend those offers rather than blocking them.
 
 **Possible Milieu implication**
 
 Design interaction systems that encourage:
 
 * making offers
-* accepting and building on others’ offers
+* accepting and building on othersâ€™ offers
 * constructive recovery after rejected or misunderstood offers
 
 ---
@@ -101,7 +100,7 @@ These structures should be considered part of the **core architecture of play**,
 
 ## Milieu Relevance
 
-Johnstone’s work suggests that meaningful learning and insight can emerge through **embodied relational play**, not only through abstract narrative or scripted interaction.
+Johnstoneâ€™s work suggests that meaningful learning and insight can emerge through **embodied relational play**, not only through abstract narrative or scripted interaction.
 
 Milieu experiences may benefit from supporting:
 

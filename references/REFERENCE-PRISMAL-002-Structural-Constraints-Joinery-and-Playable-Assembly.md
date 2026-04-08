@@ -1,13 +1,9 @@
-# REFERENCE-PRISMAL-002-Structural-Constraints-Joinery-and-Playable-Assembly
+# REFERENCE-PRISMAL-002 - Structural Constraints, Joinery, and Playable Assembly
 
-## Prismal Space — Structural Constraints, Joinery as Tests, and Playable Assembly
-
-ID: REFERENCE-PRISMAL-002
-Status: Working Draft
-Created: 2026-04-04
-Updated: 2026-04-04
-
----
+- **ID:** REFERENCE-PRISMAL-002
+- **Status:** Working Draft
+- **Created:** 2026-04-04
+- **Updated:** 2026-04-04
 
 ## Intent
 
@@ -83,7 +79,7 @@ Instead, a connection is described by:
 - load transfer characteristics
 - reversibility
 
-A “joint” is understood as:
+A â€œjointâ€ is understood as:
 > a transformation of allowed states under constraints
 
 ---
@@ -166,14 +162,14 @@ Play is not optional; it is required for:
 
 Initial validation can be organized along four axes:
 
-- Fit — can the form be represented?
-- Assembly — can it be constructed through valid motion?
-- Lock — does it become constrained as intended?
-- Load — does it carry force meaningfully?
+- Fit â€” can the form be represented?
+- Assembly â€” can it be constructed through valid motion?
+- Lock â€” does it become constrained as intended?
+- Load â€” does it carry force meaningfully?
 
 With an additional requirement:
 
-- Play — is the system explorable and intuitive?
+- Play â€” is the system explorable and intuitive?
 
 ---
 

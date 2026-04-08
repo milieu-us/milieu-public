@@ -1,4 +1,4 @@
-# RECORD-000 — Milieu Record System
+# RECORD-000 - Milieu Record System
 
 - **ID:** RECORD-000
 - **Status:** Working Draft
@@ -78,7 +78,7 @@ Record types use capital-case. Additional record types may be introduced later i
 
 Record identifiers follow the pattern `TYPE[-SUBTYPE]-NUMBER`.
 
-Each record has a stable identifier. The stable identifier may optionally include a unique record subtype such as domain or project for a given set of records. Record subtypes also use capital-case when included. If a record subtype is used, we suggest reviewing if the resulting artifacts will benefit from formal metadata or schema.
+Each record has a stable identifier. The stable identifier may optionally include a unique record subtype such as domain or project for a given set of records.Â Record subtypes also use capital-case when included.Â If a record subtype is used, we suggest reviewing if the resulting artifacts will benefit from formal metadata or schema.
 
 The canonical identifier ends at the numeric component.
 

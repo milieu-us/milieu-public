@@ -1,4 +1,4 @@
-# RECORD-001 — Record Types and Semantics
+# RECORD-001 - Record Types and Semantics
 
 - **ID:** RECORD-001
 - **Title:** Record Types and Semantics

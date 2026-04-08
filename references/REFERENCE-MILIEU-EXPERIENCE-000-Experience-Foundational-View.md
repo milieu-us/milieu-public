@@ -1,15 +1,12 @@
-# REFERENCE-MILIEU-EXPERIENCE-000
+# REFERENCE-MILIEU-EXPERIENCE-000 - Experience Foundational View
 
-## Milieu Experience — Foundational View
+- **ID:** REFERENCE-MILIEU-EXPERIENCE-000
+- **Status:** Working Draft
+- **Date:** 2026-03-12
+- **Scope:** Foundational framing for Experience within Milieu
+- **Related:** DR-PRISMAL-SPACE-000, Minimum Viable Experience, Impro design reference
 
-**Status:** Working Draft\
-**Date:** 2026-03-12\
-**Scope:** Foundational framing for Experience within Milieu\
-**Related:** DR-PRISMAL-SPACE-000, Minimum Viable Experience, Impro design reference
-
----
-
-# Intent
+## Intent
 
 This Decision Record defines the current foundational view of **Experience** within Milieu.
 
@@ -21,7 +18,7 @@ Instead, it clarifies what Experience appears to be **at the level of Milieu its
 
 ---
 
-# Decision
+## Decision
 
 Milieu currently treats **Experience** as:
 
@@ -42,9 +39,9 @@ Milieu should assume that **agent** is an open category rather than a closed lis
 
 ---
 
-# Why this matters
+## Why this matters
 
-A simpler framing such as “the worlds people engage with” is too narrow for Milieu.
+A simpler framing such as Ã¢â‚¬Å“the worlds people engage withÃ¢â‚¬Â is too narrow for Milieu.
 
 It implies that Experience is primarily human-facing and downstream from more fundamental systems.
 
@@ -58,7 +55,7 @@ Experience is therefore a **primary mediation layer**, not decorative output.
 
 ---
 
-# Scope
+## Scope
 
 This record is concerned with the foundational meaning of Experience as a Milieu domain.
 
@@ -86,7 +83,7 @@ Those belong in later project-level Decision Records, Architectural Decision Rec
 
 ---
 
-# Current Foundational View
+## Current Foundational View
 
 ## Experience is agent-facing, not human-only
 
@@ -144,7 +141,7 @@ Embodiment may be especially important where understanding depends on position, 
 
 ---
 
-# Candidate Experience Invariants
+## Candidate Experience Invariants
 
 Current discussion suggests that Experience, for any agent type, likely involves a small set of recurring properties.
 
@@ -231,7 +228,7 @@ Meaning may be narrative, operational, social, symbolic, or computational.
 
 ---
 
-# Relationship to Participation
+## Relationship to Participation
 
 Experience and Participation are related but not identical.
 
@@ -246,7 +243,7 @@ Experience addresses the lived, perceived, and enacted encounter through which i
 
 ---
 
-# Relationship to Simulation
+## Relationship to Simulation
 
 Experience is closely coupled to Simulation but should not be collapsed into it.
 
@@ -268,7 +265,7 @@ Experience therefore mediates how agents interact with modeled state.
 
 ---
 
-# Relationship to Embodiment
+## Relationship to Embodiment
 
 Current Milieu thinking suggests that embodiment should be treated as a serious concern rather than an optional presentation feature.
 
@@ -282,7 +279,7 @@ This record does not prescribe one embodiment model, but it preserves the expect
 
 ---
 
-# Relationship to Design References
+## Relationship to Design References
 
 The Keith Johnstone reference is relevant because it reinforces that meaningful experience may arise through embodied relational play rather than abstract description alone.
 
@@ -292,7 +289,7 @@ This record preserves those ideas as design pressure rather than formal doctrine
 
 ---
 
-# Consequences
+## Consequences
 
 Adopting this framing has several implications.
 
@@ -318,7 +315,7 @@ Where experiences involve deep role assumption, embodiment, or intense interacti
 
 ---
 
-# Open Questions
+## Open Questions
 
 Several important questions remain open.
 
@@ -344,7 +341,7 @@ This is especially important for experiences involving role assumption, trance-a
 
 ---
 
-# Expected Sources of Evidence
+## Expected Sources of Evidence
 
 This record should be refined by evidence from:
 
@@ -359,7 +356,7 @@ This record should be refined by evidence from:
 
 ---
 
-# Review Triggers
+## Review Triggers
 
 This record should be revisited when significant findings occur, including:
 
@@ -372,7 +369,7 @@ This record should be revisited when significant findings occur, including:
 
 ---
 
-# Summary
+## Summary
 
 Milieu currently treats **Experience** as the agent-facing layer through which agents perceive, interpret, and act within a constrained world over time.
 

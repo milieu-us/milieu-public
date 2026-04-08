@@ -1,10 +1,9 @@
-# RESOURCE-SYSTEMS-000 — Systems: Minimal Ontology for Intent, Behavior, and Observation
+# REFERENCE-SYSTEMS-000 - Minimal Ontology for Intent, Behavior, and Observation
 
-**Status:** Working Draft \
-**Created:** 2026-04-05 \
-**Updated:** 2026-04-05 \
-
----
+- **ID:** REFERENCE-SYSTEMS-000
+- **Status:** Working Draft
+- **Created:** 2026-04-05
+- **Updated:** 2026-04-05
 
 ## Intent
 
@@ -193,7 +192,7 @@ Revision updates:
 
 Systems are continuously understood and evolved through a loop:
 
-Intent → (Structure ↔ Behavior) → Observation → Revision → Intent
+Intent â†’ (Structure â†” Behavior) â†’ Observation â†’ Revision â†’ Intent
 
 This loop is not strictly sequential.
 

@@ -1,18 +1,15 @@
-# DECISION-MVE-000 - Minimum Viable Experience (MVE) Stakeholder Expressions
+# DECISION-MVE-STAKEHOLDERS-000 - Minimum Viable Experience (MVE) Stakeholder Expressions
 
-**Status:** Working Draft\
-**Created:** 2026-03-23\
-**Updated:** 2026-03-23
-
----
+- **ID:** DECISION-MVE-STAKEHOLDERS-000
+- **Status:** Working Draft
+- **Created:** 2026-03-23
+- **Updated:** 2026-03-23
 
 ## Intent
 
 Define stakeholder expressions specifically for the **Minimum Viable Experience (MVE)**, while inheriting the governance structure established in DR-GOV-000. This does not redefine stakeholders globally; it captures what we need to run and learn from the first experiences.
 
 This record is guided by the Milieu Constitutional Core (Green Paper). Upon ratification, that reference will become CCR-000.
-
----
 
 ## Decision
 

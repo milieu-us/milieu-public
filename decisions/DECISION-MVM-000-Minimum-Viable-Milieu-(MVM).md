@@ -1,18 +1,15 @@
-# DECISION-MILIEU-MVM-000 — Minimum Viable Milieu (MVM)
+# DECISION-MVM-000 - Minimum Viable Milieu (MVM)
 
-**Status:** Working Draft\
-**Created:** 2026-03-23\
-**Updated:** 2026-03-23
-
----
+- **ID:** DECISION-MVM-000
+- **Status:** Working Draft
+- **Created:** 2026-03-23
+- **Updated:** 2026-03-23
 
 ## Intent
 
 Define the minimum governance model required to operate Milieu, starting with the Minimum Viable Milieu (MVM), enabling multi-stakeholder participation while preserving continuity, fairness, and resistance to capture.
 
 This document is guided by the Milieu Constitutional Core (Green Paper). Upon ratification, that reference will become CCR-000.
-
----
 
 ## Decision
 
@@ -210,7 +207,6 @@ Does not define:
 
 ## Related
 
-- RECORD-000 — Milieu Record System
+- RECORD-000 â€” Milieu Record System
 - Milieu Constitutional Core (Green Paper; future CCR-000)
 - DR-EXP-STAKEHOLDERS-000 (in progress)
-

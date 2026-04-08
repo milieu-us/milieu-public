@@ -1,8 +1,9 @@
 # REFERENCE-PRISMAL-INTERACTION-000 - Prismal Interaction
 
-**Status:** Working Paper (Exploratory)\
-**Created:** 2026-03-26\
-**Updated:** 2026-03-26\
+- **ID:** REFERENCE-PRISMAL-INTERACTION-000
+- **Status:** Working Paper (Exploratory)
+- **Created:** 2026-03-26
+- **Updated:** 2026-03-26
 
 ## Intent
 

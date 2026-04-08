@@ -1,11 +1,13 @@
-DR-MVE-000 - Minimum Viable Experience (MVE): Emergence First
+# DECISION-MVE-000 - Minimum Viable Experience (MVE): Emergence First
 
-Status: Working\
-Created: 2026-03-26\
-Updated: 2026-03-26\
-Intent: Define the minimum conditions required to test whether an experience can emerge without prior instruction.
+- **ID:** DECISION-MVE-000
+- **Status:** Working
+- **Created:** 2026-03-26
+- **Updated:** 2026-03-26
 
----
+## Intent
+
+Define the minimum conditions required to test whether an experience can emerge without prior instruction.
 
 ## Experience Overview
 

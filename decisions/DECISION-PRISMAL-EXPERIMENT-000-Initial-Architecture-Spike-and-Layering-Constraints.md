@@ -1,4 +1,4 @@
-# DECISION-PRISMAL-EXPERIMENT-000 - Prismal Space Experiment — Initial Architecture Spike and Layering Constraints
+# DECISION-PRISMAL-EXPERIMENT-000 - Prismal Space Experiment - Initial Architecture Spike and Layering Constraints
 
 - **ID:** DECISION-PRISMAL-EXPERIMENT-000
 - **Status:** Working Draft
@@ -58,7 +58,7 @@ To support this, we will:
 
 ## Rationale
 
-The planet → surface traversal scenario is simple in description but broad in implications. It pressures:
+The planet â†’ surface traversal scenario is simple in description but broad in implications. It pressures:
 
 - scale transitions
 - boundary consistency
@@ -96,13 +96,13 @@ This may include:
 
 The spike may be explored through multiple derived strategies. These must not constrain core design.
 
-### Option A — Elevation-First Composition
+### Option A â€” Elevation-First Composition
 
 - Focus on planetary shape and elevation
 - Minimal regional classification
 - Emphasis on boundary continuity and scale transitions
 
-### Option B — Derived Biome Classification (simplified Holdridge-style)
+### Option B â€” Derived Biome Classification (simplified Holdridge-style)
 
 - Use a small set of continuous input fields (e.g., temperature proxy, moisture proxy, elevation influence)
 - Map to discrete regional classifications
@@ -115,7 +115,7 @@ The spike may be explored through multiple derived strategies. These must not co
 - Test stability and legibility of regions across scales
 - Evaluate boundary coherence and inheritance
 
-### Option C — Alternative Regionalization Strategies
+### Option C â€” Alternative Regionalization Strategies
 
 - Noise-based grouping
 - Rule-based systems
@@ -212,11 +212,11 @@ Additionally:
 
 ## References
 
-- RECORD-000 — Milieu Record System
-- REFERENCE-PRISMAL-000 — Current View and Open Questions
-- REFERENCE-PRISMAL-001 — Field, Lattice, and Projection — Working Model
-- REFERENCE-PRISMAL-002 — Structural Constraints, Joinery as Tests, and Playable Assembly
-- REFERENCE-PRISMAL-DEMO-000 — Planet Biome Demo Proposal
+- RECORD-000 â€” Milieu Record System
+- REFERENCE-PRISMAL-000 â€” Current View and Open Questions
+- REFERENCE-PRISMAL-001 â€” Field, Lattice, and Projection â€” Working Model
+- REFERENCE-PRISMAL-002 â€” Structural Constraints, Joinery as Tests, and Playable Assembly
+- REFERENCE-PRISMAL-DEMO-000 â€” Planet Biome Demo Proposal
 
 ## Notes
 

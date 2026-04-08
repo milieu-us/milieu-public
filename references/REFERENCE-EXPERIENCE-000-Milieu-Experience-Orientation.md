@@ -1,16 +1,13 @@
 # REFERENCE-EXPERIENCE-000 - Milieu Experience Orientation
 
-**Status**: Working Draft\
-**Created:** 2026-03-21\
-**Updated:** 2026-04-05
-
----
+- **ID:** REFERENCE-EXPERIENCE-000
+- **Status:** Working Draft
+- **Created:** 2026-03-21
+- **Updated:** 2026-04-05
 
 ## Intent
 
 Preserve the core conceptual orientation of Milieu Experiences so they remain stable across implementation, tooling, and team evolution.
-
----
 
 ## Purpose
 
@@ -327,4 +324,3 @@ This document is expected to evolve or be replaced.
 Its purpose is not permanence of wording, but continuity of understanding.
 
 > What must endure is not the form of the system, but the way it is understood.
-
