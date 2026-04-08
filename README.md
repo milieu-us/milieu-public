@@ -16,6 +16,8 @@ Use a fresh clone for each person or agent context that contributes to this repo
 - Prefer `git pull --ff-only` unless you are intentionally creating a local merge.
 - Keep hooks opt-in and visible. If hooks become part of the workflow, they should be documented in the repository rather than living only in machine-local Git config.
 
+If you are creating or editing records, follow the record-system guidance in [AGENTS.md](AGENTS.md) and the core record docs in `records/`.
+
 ## What Is Milieu?
 
 Milieu is exploring shared experiences where people, AI agents, and systems participate together in world-like spaces.

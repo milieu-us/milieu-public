@@ -57,6 +57,28 @@ This follows Milieu's current foundational constraint:
 - When a decision depends on off-repo context, ask for that context or record the assumption being made.
 - Prefer durable repository artifacts for information future agents will need.
 
+## Record System Guidance
+
+When creating or editing record artifacts in this repository, the Milieu record system is the normative source of truth:
+
+- [records/RECORD-000-Milieu-Record-System.md](records/RECORD-000-Milieu-Record-System.md)
+- [records/RECORD-001-Record-Types-and-Semantics.md](records/RECORD-001-Record-Types-and-Semantics.md)
+- [records/RECORD-002-Current-Markdown-Representation-for-Records.md](records/RECORD-002-Current-Markdown-Representation-for-Records.md)
+
+This guidance applies first to record artifacts such as `RECORD`, `DECISION`, and `REFERENCE` documents. Top-level coordination docs such as `README.md` and `AGENTS.md` should align where practical, but they are not themselves the full record spec.
+
+When working on these artifacts:
+
+- preserve the required metadata fields and ID consistency defined in `RECORD-000`
+- use the appropriate record type semantics defined in `RECORD-001`
+- preserve a first H1 that begins with the record ID
+- preserve the current Markdown representation conventions defined in `RECORD-002`
+- avoid inventing new structure when the existing record rules already cover the case
+
+If classification or structure is unclear, surface the uncertainty rather than guessing.
+
+Existing documents may reflect earlier conventions. Do not treat unrelated edits as a reason to silently normalize older records unless a mismatch directly blocks the requested work.
+
 ## Git Workflow Guidance
 
 Agents contributing changes in this repository should assume the following local Git workflow:
