@@ -1,15 +1,21 @@
-# REFERENCE-EXPERIENCE-003 - Voice Fonts for Embodied Play and Production
+# REFERENCE-EXPERIENCE-003-Voice-Fonts-for-Embodied-Play-and-Production
 
-- **ID:** REFERENCE-EXPERIENCE-003
-- **Status:** Proposal / For Pilot
-- **Created:** 2026-04-01
-- **Updated:** 2026-04-05
-- **Domain:** Experience (Minimum Viable Experience)
-- **Related:** REFERENCE-EXPERIENCE-001 - Impro: Embodied Play and Improvisation; MVE facilitation and interaction design; Voice & Identity Policy (forthcoming)
+## Voice Fonts for Embodied Play and Production
+
+**Status:** Proposal / For Pilot\
+**Created:** 2026-04-01\
+**Updated:** 2026-04-05\
+**Domain:** Experience (Minimum Viable Experience)\
+**Related:**
+- REFERENCE-EXPERIENCE-001 — Impro: Embodied Play and Improvisation
+- MVE facilitation and interaction design
+- Voice & Identity Policy (forthcoming)
+
+---
 
 ## Intent
 
-Explore whether **voice transformation (â€œvoice fontsâ€)** can enhance embodied play and production quality **without reducing spontaneity, agency, or safety**.
+Explore whether **voice transformation (“voice fonts”)** can enhance embodied play and production quality **without reducing spontaneity, agency, or safety**.
 
 This proposal defines a **small pilot experiment**, not a long-term commitment or vendor selection.
 
@@ -75,10 +81,10 @@ Participants must be able to explicitly indicate when they are speaking **in-cha
 
 ## Why This Matters
 
-- **Preserves intent** â€” participants control when they enter role
-- **Prevents misclassification** â€” avoids transforming unintended speech
-- **Supports safety boundaries** â€” clear separation between play and self
-- **Improves processing accuracy** â€” removes need for unreliable inference
+- **Preserves intent** — participants control when they enter role
+- **Prevents misclassification** — avoids transforming unintended speech
+- **Supports safety boundaries** — clear separation between play and self
+- **Improves processing accuracy** — removes need for unreliable inference
 
 ## Data Implication (Minimal)
 
@@ -121,8 +127,8 @@ Initial testing suggests:
 
 - Costs scale with **total dialogue volume**
 - Estimated:
-  - \~\$20â€“\$30 per full-length session (multi-character)
-  - \~8â€“10% increase relative to participant compensation
+  - \~\$20–\$30 per full-length session (multi-character)
+  - \~8–10% increase relative to participant compensation
 
 These are **early estimates**. The pilot will establish actual usage.
 
@@ -169,7 +175,7 @@ The pilot should help answer:
 ### Interaction Flow
 
 - Does push-to-talk interrupt immersion?
-- Does it become a natural â€œenter roleâ€ signal?
+- Does it become a natural “enter role” signal?
 
 ### Social Dynamics
 
@@ -195,7 +201,7 @@ The pilot should help answer:
 ### Scope
 
 - Single session (\~3 hours)
-- Small group (5â€“8 participants)
+- Small group (5–8 participants)
 
 ### Approach
 
@@ -255,6 +261,6 @@ Voice transformation may allow us to:
 - expand expressive range
 - increase production consistency
 
-â€¦but only if it **supports embodiment rather than replacing it**.
+…but only if it **supports embodiment rather than replacing it**.
 
 A small pilot is the appropriate next step.

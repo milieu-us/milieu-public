@@ -1,14 +1,17 @@
-# REFERENCE-PRISMAL-000 - Prismal Space Current View and Open Questions
+# REFERENCE-PRISMAL-000
 
-- **ID:** REFERENCE-PRISMAL-000
-- **Status:** Working / Provisional Reference
-- **Date:** 2026-03-06
-- **Scope:** Long-range simulation representation context for Prismal Space
-- **Related:** Prismal Starter exploration, multi-scale simulation research
+## Prismal Space — Current View and Open Questions
 
-## Intent
+**Status:** Working / Provisional Reference\
+**Date:** 2026-03-06\
+**Scope:** Long-range simulation representation context for Prismal Space\
+**Related:** Prismal Starter exploration, multi-scale simulation research
 
-This Reference Record captures the **current provisional view of PrismalÃ¢â€žÂ¢ and Prismal SpaceÃ¢â€žÂ¢** as it is presently understood.
+---
+
+# Intent
+
+This Reference Record captures the **current provisional view of Prismal™ and Prismal Space™** as it is presently understood.
 
 The purpose of this record is to preserve a shared orientation toward the long-range simulation representation that multiple exploration efforts are investigating. It describes the **apparent structure, durable pressures, and open questions** surrounding Prismal Space.
 
@@ -16,11 +19,11 @@ This record **is not a directive for implementation teams**. It does not prescri
 
 Instead, it provides a **big-picture reference** that teams may use when evaluating local decisions and experiments.
 
-Exploration work Ã¢â‚¬â€- including Prismal Starter Ã¢â‚¬â€- will generate evidence that may refine or replace the views expressed here.
+Exploration work —- including Prismal Starter —- will generate evidence that may refine or replace the views expressed here.
 
 ---
 
-## Scope
+# Scope
 
 This record addresses the **conceptual representation of simulation space across scales**.
 
@@ -45,7 +48,7 @@ Those decisions belong in project-level Decision Records and Architectural Decis
 
 ---
 
-## Current Provisional View
+# Current Provisional View
 
 Current exploration suggests that **Prismal Space may function as a reference framework for organizing simulation across multiple scales**.
 
@@ -80,11 +83,11 @@ Simulation environments will likely involve several overlapping representations,
 
 These representations may share spatial anchors without necessarily sharing the same data model.\
 \
-Prismal Space represents the lattice-oriented spatial view of the simulation. Other viewsÃ¢â‚¬â€such as energy, information, or computational representationsÃ¢â‚¬â€may coexist and be navigated between for different purposes.
+Prismal Space represents the lattice-oriented spatial view of the simulation. Other views—such as energy, information, or computational representations—may coexist and be navigated between for different purposes.
 
 ---
 
-## Durable Constraints We Suspect Matter
+# Durable Constraints We Suspect Matter
 
 Early exploration suggests several pressures that appear likely to remain relevant across projects. These should be treated as **guiding concerns**, not rigid rules.
 
@@ -159,11 +162,11 @@ Meshes, textures, and shaders are presentation layers. They should not become th
 
 ---
 
-## Questions Active Explorations Should Help Answer
+# Questions Active Explorations Should Help Answer
 
 Several important questions remain unresolved.
 
-Exploration projectsÃ¢â‚¬â€including Prismal StarterÃ¢â‚¬â€are expected to provide evidence that helps answer them.
+Exploration projects—including Prismal Starter—are expected to provide evidence that helps answer them.
 
 ## What constitutes canonical spatial identity?
 
@@ -225,7 +228,7 @@ Existing engines and tools may provide strong capabilities but may also embed as
 
 ---
 
-## Expected Sources of Evidence
+# Expected Sources of Evidence
 
 Evidence informing this record may emerge from multiple exploration efforts, including:
 
@@ -242,7 +245,7 @@ Findings from these efforts should be referenced in project-level Decision Recor
 
 ---
 
-## Relationship to Project-Level Records
+# Relationship to Project-Level Records
 
 Projects such as Prismal Starter will produce their own Decision Records and Architectural Decision Records describing local implementation choices.
 
@@ -258,7 +261,7 @@ Project records should reference this document where relevant, especially when a
 
 ---
 
-## Consequences
+# Consequences
 
 Maintaining a provisional big-picture record allows:
 
@@ -271,7 +274,7 @@ This record should evolve as new insights emerge.
 
 ---
 
-## Review Triggers
+# Review Triggers
 
 This record should be revisited when significant findings occur, including:
 
@@ -283,11 +286,11 @@ This record should be revisited when significant findings occur, including:
 
 ---
 
-## Addendum A Ã¢â‚¬â€ Multiple Views of Simulation
+# Addendum A — Multiple Views of Simulation
 
 Prismal Space currently represents the **lattice-oriented spatial view** of the simulation.
 
-Other viewsÃ¢â‚¬â€such as **energy**, **information**, or **computational** viewsÃ¢â‚¬â€may also be necessary for different purposes. A given phenomenon may be easier to simulate, reason about, optimize, or render from one view than another.
+Other views—such as **energy**, **information**, or **computational** views—may also be necessary for different purposes. A given phenomenon may be easier to simulate, reason about, optimize, or render from one view than another.
 
 This does not imply separate realities. It suggests that the same underlying simulation may need to be understood through multiple lenses, with lawful ways to navigate between them while preserving identity, meaning, and relevant constraints.
 
@@ -295,15 +298,15 @@ This addendum is explanatory and provisional. It does not yet define a formal ar
 
 ---
 
-## Summary
+# Summary
 
 Prismal Space currently appears to be a **multi-scale spatial reference framework** that may support coherent simulation across bands of scale.
 
-However, the precise form of that frameworkÃ¢â‚¬â€and how it interacts with fields, objects, rendering systems, and authoring toolsÃ¢â‚¬â€remains an open question.
+However, the precise form of that framework—and how it interacts with fields, objects, rendering systems, and authoring tools—remains an open question.
 
 Active exploration projects are expected to generate the evidence necessary to refine this understanding.
 
 This record exists to **preserve shared orientation while that exploration proceeds**.
 
-Ã‚Â© 2011Ã¢â‚¬â€œpresent Milieu.Us Ã¢â‚¬â€ All rights reserved.
-MilieuÃ¢â€žÂ¢, PrismalÃ¢â€žÂ¢, and Prismal SpaceÃ¢â€žÂ¢ are trademarks of Milieu.Us.
+© 2011–present Milieu.Us — All rights reserved.
+Milieu™, Prismal™, and Prismal Space™ are trademarks of Milieu.Us.
