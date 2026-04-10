@@ -172,6 +172,8 @@ In minimal form:
 
 `Selection(Substrate, Primitive, Rule) -> View`
 
+Selection takes a substrate together with a choice of primitive and rule set, then produces a view that interprets the same underlying structure.
+
 The substrate supplies available relationships.
 
 The primitive identifies the kind of element to foreground.
