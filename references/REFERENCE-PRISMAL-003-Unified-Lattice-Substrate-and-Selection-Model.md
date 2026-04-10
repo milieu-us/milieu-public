@@ -57,7 +57,7 @@ This document generalizes how multiple lattice interpretations may be derived fr
 
 The model may have uses beyond Prismal. It is preserved here because Prismal currently provides the clearest local reason to examine substrate/view separation, primitive selection, and selection-rule-based representation.
 
-## Substrate (Canonical Candidate)
+## Substrate Hypothesis
 
 The substrate is a connectivity structure independent of any one named lattice interpretation.
 
@@ -72,11 +72,11 @@ This record does not yet decide whether the substrate should be represented as:
 
 For this reference, the important property is not the final storage form. The important property is that a substrate preserves relationships from which multiple views may be derived.
 
-Candidate substrates include:
+The following examples sit at different modeling layers and should not yet be treated as interchangeable peers:
 
-- an integer grid (`Z^3`)
-- FCC adjacency
-- a more general combinatorial complex, such as a Prismal complex
+- index space, such as an integer grid (`Z^3`)
+- adjacency model, such as FCC neighborhood relationships
+- structural formalism, such as a graph, cell complex, or Prismal complex
 
 ## Substrate Invariants
 
@@ -86,9 +86,10 @@ If this model is useful for Prismal, the substrate likely needs to preserve:
 - adjacency or neighborhood relationships
 - incidence relationships between primitives
 - enough structure to derive more than one lattice view
-- enough continuity across scale to avoid treating each view as a disconnected system
 
 These are candidate invariants, not final data-structure requirements.
+
+A related Prismal research goal is to preserve enough continuity across scale to avoid treating each view as a disconnected system.
 
 ## Primitive Selections
 
