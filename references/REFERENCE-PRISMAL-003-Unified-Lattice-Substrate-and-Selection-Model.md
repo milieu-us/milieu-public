@@ -3,17 +3,17 @@
 - **ID:** REFERENCE-PRISMAL-003
 - **Status:** Working Draft
 - **Created:** 2026-04-09
-- **Updated:** 2026-04-09
+- **Updated:** 2026-04-10
 
 ## Intent
 
-Capture a unifying model for lattice structures in 3D space, exploring whether commonly referenced lattices such as Simple Cubic, Body-Centered Cubic, Face-Centered Cubic, and related structures may be interpreted as views arising from a shared underlying substrate through different primitive selections and selection rules.
+Capture a conceptual model for reasoning about lattice structures as derived views over an underlying substrate.
 
-This reference supports Prismal Space as a coherent simulation and representation framework in which multiple lattice interpretations can emerge from one underlying structure without requiring separate foundational models for each named lattice.
+This reference explores whether commonly referenced lattices such as Simple Cubic, Body-Centered Cubic, Face-Centered Cubic, and related structures may be understood through primitive selection and selection rules rather than as separate foundational systems.
 
 ## Use and Status
 
-This reference captures a conceptual model that may be relevant to Prismal Space, especially where multiple lattice views, primitive selections, or substrate interpretations are involved.
+This reference may inform Prismal Space where multiple lattice views, primitive selections, or substrate interpretations are involved.
 
 It does not decide Prismal's canonical data structure.
 
@@ -26,15 +26,23 @@ In particular, this record does not yet determine:
 
 Those questions remain open and should be resolved through later decisions and implementation evidence.
 
-## Summary
+## Core Model
 
-In this model, a lattice can be described by:
+In this model, a lattice view is described by:
 
-- a shared underlying substrate
+- a substrate
 - a primitive selection
 - a selection rule
 
-Many common lattice systems may then be expressed as specific instances of those three components.
+The substrate describes what relationships are available before interpretation.
+
+Primitive selection determines which kind of element is foregrounded.
+
+The selection rule determines which subset or arrangement of those elements is being read as the view.
+
+A view is derived from the substrate for a purpose. It is not automatically the canonical substrate itself.
+
+Many common lattice systems may then be understood as specific views produced from those components.
 
 ## Relationship to Prior Prismal References
 
@@ -49,56 +57,88 @@ This document generalizes how multiple lattice interpretations may be derived fr
 
 The model may have uses beyond Prismal. It is preserved here because Prismal currently provides the clearest local reason to examine substrate/view separation, primitive selection, and selection-rule-based representation.
 
-## Underlying Substrate
+## Substrate (Canonical Candidate)
 
-The substrate is a discrete spatial structure capable of expressing adjacency, containment, and neighborhood relationships.
+The substrate is a connectivity structure independent of any one named lattice interpretation.
 
-Examples include:
+It is the structure over which adjacency, containment, neighborhood, and incidence relationships can be evaluated.
+
+This record does not yet decide whether the substrate should be represented as:
+
+- a graph
+- a fixed lattice with known neighbor relationships
+- a cell complex
+- another discrete or combinatorial structure
+
+For this reference, the important property is not the final storage form. The important property is that a substrate preserves relationships from which multiple views may be derived.
+
+Candidate substrates include:
 
 - an integer grid (`Z^3`)
 - FCC adjacency
 - a more general combinatorial complex, such as a Prismal complex
 
-The key property is that the substrate may not need to be tied to a single lattice interpretation. It can instead be treated as a shared structure from which multiple lattice views may be derived.
+## Substrate Invariants
+
+If this model is useful for Prismal, the substrate likely needs to preserve:
+
+- stable identity for addressable elements
+- adjacency or neighborhood relationships
+- incidence relationships between primitives
+- enough structure to derive more than one lattice view
+- enough continuity across scale to avoid treating each view as a disconnected system
+
+These are candidate invariants, not final data-structure requirements.
 
 ## Primitive Selections
 
-A lattice can be viewed by selecting which dimensional primitives are foregrounded.
+A primitive selection chooses which dimensional elements of the substrate are foregrounded for a particular view or operation.
 
-### Vertex Lattice (0D)
+Examples include:
 
-Points and their adjacency.
+- vertices
+- edges
+- faces
+- cells
+- interstitial positions
 
-Represents:
+Primitive selections are not necessarily separate stored systems. They may be different readings of the same underlying substrate.
+
+### Vertex View (0D)
+
+Foregrounds points and their adjacency.
+
+This may be useful for:
 
 - position
 - minimal topology
 
-### Edge Lattice (1D)
+### Edge View (1D)
 
-Connections between vertices.
+Foregrounds connections between vertices or sites.
 
-Represents:
+This may be useful for:
 
 - interaction
 - flow
 - constraint propagation
 
-### Face Lattice (2D)
+### Face View (2D)
 
-Surfaces bounded by edges.
+Foregrounds surfaces bounded by edges.
 
-Represents:
+This may be useful for:
 
 - boundaries
 - interfaces
 - contact regions
+- rendering surfaces
 
-### Cell Lattice (3D)
+### Cell View (3D)
 
-Volumes and their adjacency.
+Foregrounds volumes and their adjacency.
 
-Represents:
+This may be useful for:
 
 - occupancy
 - state
@@ -108,11 +148,11 @@ Example:
 
 - rhombic dodecahedron as the Voronoi cell of FCC
 
-### Interstitial Lattice (Derived)
+### Interstitial View (Derived)
 
-Void or constraint-derived positions within the structure.
+Foregrounds void or constraint-derived positions within the structure.
 
-Represents:
+This may be useful for:
 
 - potential states
 - emergent positions
@@ -123,32 +163,60 @@ Examples:
 - tetrahedral sites
 - octahedral sites
 
-## Selection Rules
+## Selection Model
 
-A lattice is further defined by selecting a subset of the substrate according to a rule.
+Selection is the operation that maps a substrate into a view.
 
-These rules operate over coordinates, parity relationships, offsets, or adjacency structure.
+In minimal form:
+
+`Selection(Substrate, Primitive, Rule) -> View`
+
+The substrate supplies available relationships.
+
+The primitive identifies the kind of element to foreground.
+
+The rule identifies which elements or relationships participate in the resulting view.
+
+Selection rules may operate over:
+
+- coordinates
+- parity relationships
+- offsets
+- adjacency
+- incidence
+- constraints
+- context
+
+This framing is intended to make selection first-class without yet deciding how selection is represented in runtime systems.
+
+## Lattice Views (Derived)
+
+Named lattice structures can be treated as derived views when they can be produced by selecting primitives and applying rules over a substrate.
+
+This does not mean every lattice view is always lossless, interchangeable, or equally useful. It means the relationship between views can be made explicit instead of hidden behind separate names.
 
 ### Simple Cubic (SC)
 
-All points in the substrate:
+A simple cubic view may be produced by selecting all points in an integer-grid substrate:
 
 `(x, y, z) in Z^3`
 
 ### Body-Centered Cubic (BCC)
 
-Points satisfying parity or offset rules, for example:
+A body-centered cubic view may be produced by applying parity or offset rules, for example:
 
 - integer points plus `(1/2, 1/2, 1/2)`
 - parity-constrained coordinate subsets
 
 ### Face-Centered Cubic (FCC)
 
-Points where coordinate parity aligns under an appropriate scaling or embedding.
+A face-centered cubic view may be produced by selecting points whose coordinate parity aligns under an appropriate scaling or embedding.
 
 ### Derived Structures
 
-Additional structures arise from alternative selection rules, including:
+Additional structures may arise from alternative selection rules.
+
+Examples include:
 
 - interstitial lattices
 - multi-basis lattices such as diamond cubic
@@ -164,47 +232,31 @@ Examples:
 
 These may often be understood not as wholly separate systems, but as different projections or selections over related structure.
 
-## Unified Model
+## Implications
 
-In this framing:
+### Simulation
 
-`Lattice = Substrate + Primitive Selection + Selection Rule`
+Simulation systems may be able to operate over the primitive view best suited to the phenomenon being modeled.
 
-Implications:
-
-- there is less need to treat named lattices as separate foundational systems
-- multiple lattice views may be composed over one substrate
-- transitions between representations may be modeled explicitly where the substrate and selection rules preserve enough information
-
-## Architectural Implications
-
-### Single Data Structure
-
-A unified adjacency structure may support:
-
-- simulation through edges and cells
-- rendering through faces
-- reasoning through vertices
-
-### Constraint-Driven Selection
-
-Selection rules may be expressible as constraints, aligning this model with Prismal constraint-oriented reasoning.
-
-### Multi-Domain Support
-
-Different domains may emphasize different views:
+Examples:
 
 - physics may emphasize edges and vertices
 - materials may emphasize cells and interstitials
-- rendering may emphasize faces
-- gameplay may emphasize cells and edges
+- region simulation may emphasize cell adjacency
 
-### Continuity Across Scales
+### Rendering
 
-If these views share a substrate:
+Rendering may emphasize faces or derived surfaces without making those surfaces the canonical simulation state.
 
-- transitions across scales can remain more coherent
-- representation changes need not imply a change in foundational identity
+### Coordinate Systems
+
+Coordinate systems may be treated as projections or selection aids rather than as the foundation of the model.
+
+### Runtime Systems
+
+Selection may become a runtime concern if different agents, scales, domains, or systems need different views over the same substrate.
+
+This possibility is not yet an implementation requirement.
 
 ## Relationship to Existing Theory
 
