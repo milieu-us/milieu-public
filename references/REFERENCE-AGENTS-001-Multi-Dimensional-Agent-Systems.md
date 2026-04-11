@@ -1,14 +1,14 @@
-# REFERENCE-AGENTS-001-Multi-Dimensional-Agent-Systems
+# REFERENCE-AGENTS-001 - Multi-Dimensional Agent Systems - Working View
 
-## Multi-Dimensional Agent Systems - Working View
-
-Status: Reference  
-Created: 2026-04-03  
-Updated: 2026-04-03  
+- ID: REFERENCE-AGENTS-001
+- Status: Reference  
+- Created: 2026-04-03  
+- Updated: 2026-04-11  
 
 ---
 
-## Intent 
+## Intent
+
 Capture that agent capability (autonomy, count, orchestration) is only one dimension of system design. Milieu requires additional dimensions to safely and meaningfully operate agent systems.
 
 ---
