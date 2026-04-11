@@ -3,7 +3,7 @@
 - **ID:** REFERENCE-PRISMAL-001
 - **Status:** Working Draft
 - **Created:** 2026-04-03
-- **Updated:** 2026-04-04
+- **Updated:** 2026-04-11
 
 ## Intent
 Capture an emerging framing for how continuous space, discrete simulation, and computational representations relate within Prismal work.

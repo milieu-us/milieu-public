@@ -3,7 +3,7 @@
 - **ID:** DECISION-MILIEU-CORE-000
 - **Status:** Working Draft
 - **Created:** 2026-03-29
-- **Updated:** 2026-03-29
+- **Updated:** 2026-04-11
 
 ## Intent
 
