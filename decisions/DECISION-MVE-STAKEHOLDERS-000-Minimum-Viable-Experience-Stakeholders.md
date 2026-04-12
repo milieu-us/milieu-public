@@ -1,22 +1,19 @@
-# DECISION-MVE-000 - Minimum Viable Experience (MVE) Stakeholder Expressions
+# DECISION-MVE-STAKEHOLDERS-000 - Minimum Viable Experience (MVE) Stakeholder Expressions
 
-**Status:** Working Draft\
-**Created:** 2026-03-23\
-**Updated:** 2026-03-23
-
----
+- **ID:** DECISION-MVE-STAKEHOLDERS-000
+- **Status:** Working Draft
+- **Created:** 2026-03-23
+- **Updated:** 2026-04-11
 
 ## Intent
 
-Define stakeholder expressions specifically for the **Minimum Viable Experience (MVE)**, while inheriting the governance structure established in DR-GOV-000. This does not redefine stakeholders globally; it captures what we need to run and learn from the first experiences.
+Define stakeholder expressions specifically for the **Minimum Viable Experience (MVE)**, while inheriting the governance structure established in DECISION-MILIEU-MVM-000. This does not redefine stakeholders globally; it captures what we need to run and learn from the first experiences.
 
 This record is guided by the Milieu Constitutional Core (Green Paper). Upon ratification, that reference will become CCR-000.
 
----
-
 ## Decision
 
-Milieu experiences inherit the stakeholder and governance model defined in DR-GOV-000.
+Milieu experiences inherit the stakeholder and governance model defined in DECISION-MILIEU-MVM-000.
 
 This record does not create a separate stakeholder system for Experience. Instead, it applies the existing governance structure to the Experience domain and identifies the experience-facing expressions that matter for design, facilitation, safety, authorship, and learning.
 
@@ -24,7 +21,7 @@ This record does not create a separate stakeholder system for Experience. Instea
 
 ## 1. Inheritance from Governance
 
-Within this Experience stakeholders are governed by the same model defined in DR-GOV-000:
+Within this Experience stakeholders are governed by the same model defined in DECISION-MILIEU-MVM-000:
 
 - stakeholders are expressed as modes, not fixed classes
 - contribution domains describe how value enters the system, not who a stakeholder is
@@ -32,7 +29,7 @@ Within this Experience stakeholders are governed by the same model defined in DR
 - stewardship is responsibility, not ownership
 - stakeholders act through human agents, AI agents, and system agents
 
-This record should be read as a domain-specific interpretation of DR-GOV-000, not as a replacement for it.
+This record should be read as a domain-specific interpretation of DECISION-MILIEU-MVM-000, not as a replacement for it.
 
 ---
 
@@ -76,7 +73,7 @@ This movement is desirable. Experience should support pathways between expressio
 
 ## 4. Experience Contribution Domains
 
-The contribution domains inherited from DR-GOV-000 remain applicable within Experience.
+The contribution domains inherited from DECISION-MILIEU-MVM-000 remain applicable within Experience.
 
 In this domain, they may appear as:
 
@@ -102,7 +99,7 @@ Examples:
 
 No single contribution type grants universal authority over Experience.
 
-Where Experience decisions cross into broader Milieu concerns, DR-GOV-000 remains the governing frame.
+Where Experience decisions cross into broader Milieu concerns, DECISION-MILIEU-MVM-000 remains the governing frame.
 
 ---
 
@@ -148,7 +145,7 @@ Experience may involve external stakeholders and adjacent participants such as:
 - distribution partners
 - outside audiences
 
-As in DR-GOV-000, their standing is scoped to the value flows or constraints directly affecting the experience.
+As in DECISION-MILIEU-MVM-000, their standing is scoped to the value flows or constraints directly affecting the experience.
 
 They do not gain general authority over Experience by default.
 
@@ -156,7 +153,7 @@ They do not gain general authority over Experience by default.
 
 ## 9. What This Record Adds
 
-Relative to DR-GOV-000, this record adds only what is needed for the MVE:
+Relative to DECISION-MILIEU-MVM-000, this record adds only what is needed for the MVE:
 
 - a small, testable set of stakeholder expressions for early experiences
 - the expectation of movement across those expressions
@@ -211,4 +208,4 @@ Does not define:
 - RECORD-000 — Milieu Record System
 - DECISION-DOMAIN-000 — Milieu Domain Orientation Model
 - Milieu Constitutional Core (Green Paper; future CCR-000)
-- DECISION-GOV-000 — Minimum Viable Governance (MVM)
+- DECISION-MILIEU-MVM-000 — Minimum Viable Milieu (MVM)

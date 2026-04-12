@@ -1,10 +1,9 @@
-# DECISION-MILIEU-MVM-000 — Minimum Viable Milieu (MVM)
+# DECISION-MILIEU-MVM-000 - Minimum Viable Milieu (MVM)
 
-**Status:** Working Draft\
-**Created:** 2026-03-23\
-**Updated:** 2026-03-23
-
----
+- **ID:** DECISION-MILIEU-MVM-000
+- **Status:** Working Draft
+- **Created:** 2026-03-23
+- **Updated:** 2026-04-11
 
 ## Intent
 
@@ -213,4 +212,3 @@ Does not define:
 - RECORD-000 — Milieu Record System
 - Milieu Constitutional Core (Green Paper; future CCR-000)
 - DR-EXP-STAKEHOLDERS-000 (in progress)
-

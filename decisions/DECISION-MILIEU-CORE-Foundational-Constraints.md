@@ -1,9 +1,13 @@
-ID: DECISION-MILIEU-CORE-000
-Status: Working Draft
-Created: 2026-03-29
-Updated: 2026-03-29
+# DECISION-MILIEU-CORE-000 - Foundational Constraints
 
-# Foundational Constraints
+- **ID:** DECISION-MILIEU-CORE-000
+- **Status:** Working Draft
+- **Created:** 2026-03-29
+- **Updated:** 2026-04-11
+
+## Intent
+
+To ensure that all work remains understandable, governable, and shareable across human agents, AI agents, and system agents.
 
 ## Decision
 
@@ -12,10 +16,6 @@ All systems and activities within Milieu adhere to the following constraints:
 - Nothing unbounded  
 - Nothing implicit  
 - Nothing unobservable  
-
-## Intent
-
-To ensure that all work remains understandable, governable, and shareable across human agents, AI agents, and system agents.
 
 ## Interpretation
 

@@ -1,8 +1,9 @@
 # REFERENCE-PRISMAL-INTERACTION-000 - Prismal Interaction
 
-**Status:** Working Paper (Exploratory)\
-**Created:** 2026-03-26\
-**Updated:** 2026-03-26\
+- **ID:** REFERENCE-PRISMAL-INTERACTION-000
+- **Status:** Working Draft
+- **Created:** 2026-03-26
+- **Updated:** 2026-04-11
 
 ## Intent
 
@@ -356,7 +357,7 @@ Experimental inputs and presentation layers should plug into the posture or expr
 - DECISION-PRISMAL-SPACE-000 - Prismal Space: Current View and Open Questions
 - DECISION-EXP-000 - Minimum Viable Experience
 - REFERENCE-EXP-000 - Impro Embodied Play and Improvisation
-- DECISION-GOV-000 - Minimum Viable Governance
+- DECISION-MILIEU-MVM-000 - Minimum Viable Milieu (MVM)
 
 ## Addendum A - Practical framing for builders
 

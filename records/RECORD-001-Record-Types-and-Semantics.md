@@ -1,10 +1,10 @@
-# RECORD-001 — Record Types and Semantics
+# RECORD-001 - Record Types and Semantics
 
 - **ID:** RECORD-001
 - **Title:** Record Types and Semantics
 - **Status:** Working Draft
 - **Created:** 2026-04-06
-- **Updated:** 2026-04-06
+- **Updated:** 2026-04-11
 
 ## Intent
 
