@@ -1,7 +1,7 @@
 # DECISION-MVE-000 - Minimum Viable Experience (MVE): Emergence First
 
 - **ID:** DECISION-MVE-000
-- **Status:** Working
+- **Status:** Working Draft
 - **Created:** 2026-03-26
 - **Updated:** 2026-04-11
 

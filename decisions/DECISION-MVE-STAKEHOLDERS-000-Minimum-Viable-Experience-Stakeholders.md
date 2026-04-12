@@ -208,4 +208,4 @@ Does not define:
 - RECORD-000 — Milieu Record System
 - DECISION-DOMAIN-000 — Milieu Domain Orientation Model
 - Milieu Constitutional Core (Green Paper; future CCR-000)
-- DECISION-GOV-000 — Minimum Viable Governance (MVM)
+- DECISION-MILIEU-MVM-000 — Minimum Viable Milieu (MVM)

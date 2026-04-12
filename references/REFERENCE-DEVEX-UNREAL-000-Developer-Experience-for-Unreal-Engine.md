@@ -4,7 +4,6 @@
 - **Status:** Working Draft
 - **Created:** 2026-03-06
 - **Updated:** 2026-04-11
-- **Domain:** DevEx Unreal
 
 ## Intent
 
