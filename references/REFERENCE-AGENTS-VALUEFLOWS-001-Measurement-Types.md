@@ -1,6 +1,6 @@
-# REFERENCE-AGENTS-VALUEFLOWS-001 — Measurement Types for Agent Work and Value Flows
+# REFERENCE-AGENTS-VALUEFLOWS-001 - Measurement Types for Agent Work and Value Flows
 
-- **ID:** REFERENCE-AGENTS-001
+- **ID:** REFERENCE-AGENTS-VALUEFLOWS-001
 - **Status:** Working Draft
 - **Created:** 2026-03-11
 - **Updated:** 2026-04-11
