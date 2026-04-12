@@ -1,17 +1,25 @@
-# REFERENCE-SYSTEMS-001 — Knowledge, State, and Representation Substrates
+# REFERENCE-SYSTEMS-001 - Knowledge, State, Representation, and Continuity
 
-- ID: REFERENCE-SYSTEMS-001
-- Status: Working Draft
-- Created: 2026-04-12
-- Updated: 2026-04-12
+- **ID:** REFERENCE-SYSTEMS-001  
+- **Status:** Working Draft  
+- **Created:** 2026-04-12  
+- **Updated:** 2026-04-12
 
 ## Intent
 
-Establish a shared reference for thinking about knowledge, state, and representation across Milieu.
+Establish a shared reference for thinking about knowledge, state, representation, and continuity across Milieu.
 
 This record exists to capture current findings and explicit unknowns about how Milieu may need to represent and preserve multiple kinds of truth across institutional knowledge, shared experiences, simulation, and other future work.
 
 This is not a decision record and does not select an architecture.
+
+## Why This Lives in Systems
+
+This record lives in Systems because it is concerned with cross-domain questions about representation, projection, authority, continuity, and storage, rather than with the internal content of any one domain.
+
+It touches Milieu-level concerns and draws pressure from multiple neighboring references, including work in agents, experience, governance, and Prismal. Even so, its current center of gravity is still systemic: how different kinds of state and truth may be represented, related, preserved, and observed across domains.
+
+This record is intended to sit alongside existing Systems references, not silently revise them.
 
 ## Context
 
@@ -46,11 +54,61 @@ This work therefore sits at the intersection of:
 - experience and interpretation,
 - and archives that support later return and reinterpretation.
 
+## Vocabulary Boundary
+
+This draft uses several closely related terms that should not be collapsed.
+
+### Substrate
+
+A base medium, computational foundation, or mathematical foundation on which other representations or processes may depend.
+
+This term should not be used interchangeably with storage model, authority, or view.
+
+### Representation
+
+A form used to describe, encode, compute over, or preserve some class of state or truth.
+
+Examples may include language, events, graphs, tables, vectors, arrays, fields, traces, or executable functions.
+
+### View
+
+A perspective or projection over one or more representations.
+
+A view may emphasize a stakeholder, system boundary, local frame, or practical task.
+
+### Projection
+
+A transformation, interpretation, or derivation from one representation or view into another.
+
+A projection may be lossless, lossy, or interpretive.
+
+### Authority
+
+The representation, system, or process treated as controlling for a given class of truth under a defined scope.
+
+Authority may differ by truth class.
+
+### Storage Model
+
+How some representation is persisted, versioned, replicated, or reconstructed over time.
+
+A storage model is not automatically the same thing as a source representation or authority.
+
+## Basis of Findings
+
+This draft reflects early exploratory review and synthesis rather than a completed survey.
+
+The candidate system families mentioned here arise from current exploration of semantic and linked-data systems, preservation-oriented repository systems, real-time operational state systems, and array-, vector-, or multidimensional systems.
+
+Specific examples discussed in this exploration include systems such as Wikibase, RO-Crate, Fedora with OCFL, SpacetimeDB, and TileDB.
+
+A complete comparative bibliography is not yet preserved in-repo.
+
 ## Current Findings
 
 ### 1. This is not a single representation problem
 
-The systems reviewed so far do not suggest one universal substrate.
+The systems and families reviewed so far do not suggest one universal representation.
 
 Instead, they cluster around different strengths:
 
@@ -74,7 +132,7 @@ However, many Milieu concerns appear likely to involve important state or functi
 
 ### 3. Different truth classes may require different authoritative representations
 
-Current Milieu and Prismal work already suggests that material state, agent state, narrative state, governance state, and social state may not share the same storage model, update cadence, or projection rules.
+Current Milieu and Prismal work already suggests that material state, agent state, narrative state, governance state, and social state may not share the same representation, authority, storage model, update cadence, or projection rules.
 
 ### 4. Projection is a first-class concern
 
@@ -88,18 +146,18 @@ The hard problem includes at least:
 - how quickly it must converge,
 - and what divergence is acceptable.
 
-This concern appears repeatedly across institutional records, operational systems, and possible simulation substrates.
+This concern appears repeatedly across institutional records, operational systems, and possible simulation representations.
 
 ### 5. Candidate systems appear to specialize rather than converge
 
-Current review suggests:
+Current exploration suggests:
 
-- RDF-adjacent and linked-data systems are strong for assertions, references, provenance, and viewpoint-aware knowledge.
-- Preservation-oriented repository systems are strong for durability, versioning, auditability, and reconstruction.
-- Real-time relational systems may be strong for hot operational state and live coordination.
-- Array- and vector-oriented systems appear better aligned with dense, sparse, multidimensional, or non-language state.
+- semantic and linked-data systems appear strong for assertions, references, provenance, and viewpoint-aware knowledge,
+- preservation-oriented repository systems appear strong for durability, versioning, auditability, and reconstruction,
+- real-time relational or operational systems may be strong for hot state and live coordination,
+- and array-, vector-, or multidimensional systems appear better aligned with dense, sparse, or non-language state.
 
-These are findings about apparent strengths, not decisions.
+These are working observations, not decisions.
 
 ## Non-Language State: Explicit Unknowns
 
@@ -129,7 +187,7 @@ Some may be better represented as vectors, tensors, arrays, fields, traces, or e
 
 ### 3. Unknown authority boundaries
 
-It is not yet clear which truths should be treated as authoritative in which substrate.
+It is not yet clear which truths should be treated as authoritative in which kinds of representation or system.
 
 Different possibilities may apply to:
 
@@ -166,9 +224,9 @@ The name and final shape of this facet remain open.
 
 It is not yet clear what experiments, prototypes, or operational observations will be sufficient to reduce these unknowns.
 
-## Notes on Candidate System Families
+## Early Comparison Notes on Candidate System Families
 
-This section captures only present orientation, not commitment.
+This section captures current orientation only.
 
 ### Semantic and linked-data systems
 
@@ -217,6 +275,29 @@ These appear increasingly relevant where state is:
 
 Their fit for institutional memory and viewpoint-rich human reasoning remains less clear.
 
+## Relationship to Neighboring References
+
+This record should be read as adjacent to, but distinct from, neighboring references.
+
+### Relation to REFERENCE-SYSTEMS-000
+
+REFERENCE-SYSTEMS-000 provides a minimal ontology for intent, behavior, and observation.
+
+This record does not replace that framing.
+It asks a different question: how multiple kinds of state and knowledge may be represented, projected, preserved, and related across truth classes.
+
+### Relation to Prismal references
+
+Prismal references supply major pressure for this work, especially around non-language state, multiple representations, projection, and continuity.
+
+This record does not assume Prismal already contains the full answer for Milieu-wide representation questions.
+
+### Relation to agent, experience, and governance references
+
+Those references define important pressures and requirements.
+
+This record focuses instead on the cross-domain representation and continuity questions those pressures expose.
+
 ## Working Implications
 
 At present, the strongest shared implication is modest:
@@ -239,7 +320,7 @@ Which representation classes are likely to be first-class rather than derived?
 
 ### 3. Authority
 
-Which classes of truth should be authoritative in which kinds of substrate?
+Which classes of truth should be authoritative in which kinds of representation or system?
 
 ### 4. Projection
 
@@ -263,4 +344,4 @@ What experiments or prototypes would most quickly reduce the current unknowns?
 
 This record is intentionally early.
 
-Its purpose is to preserve orientation, findings, and explicit unknowns so later work can refine them without losing why this question matters.
+Its purpose is to preserve orientation, working findings, and explicit unknowns so later work can refine them without losing why this question matters.
