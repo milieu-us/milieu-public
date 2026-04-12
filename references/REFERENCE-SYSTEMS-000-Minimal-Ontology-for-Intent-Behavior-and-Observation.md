@@ -1,8 +1,9 @@
-# RESOURCE-SYSTEMS-000 — Systems: Minimal Ontology for Intent, Behavior, and Observation
+# REFERENCE-SYSTEMS-000 - Systems: Minimal Ontology for Intent, Behavior, and Observation
 
-**Status:** Working Draft \
-**Created:** 2026-04-05 \
-**Updated:** 2026-04-05 \
+- **ID:** REFERENCE-SYSTEMS-000
+- **Status:** Working Draft
+- **Created:** 2026-04-05
+- **Updated:** 2026-04-12
 
 ---
 
