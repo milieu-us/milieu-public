@@ -2,10 +2,10 @@
 
 ## Prismal Space – Sphere Geometry: FCC, D4, E8, and Leech Lattices
 
-ID: REFERENCE-PRISMAL-GEOMETRY-000
-Status: Working Draft
-Created: 2026-04-09
-Updated: 2026-04-09
+- ID: REFERENCE-PRISMAL-GEOMETRY-000
+- Status: Working Draft
+- Created: 2026-04-09
+- Updated: 2026-04-09
 
 ---
 
