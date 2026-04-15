@@ -21,13 +21,15 @@ When Core moves to its own library, nothing in Core should need to change. If so
 
 ## The Substrate
 
-The substrate is `Z^3` — an integer coordinate space. A site is a position in that space:
+For the first implementation, the current computational carrier is `Z^3` — an integer coordinate space. A site is a position in that space:
 
 ```
 { x, y, z } where x, y, z are integers
 ```
 
-The substrate itself has no geometry, no scale, and no preferred lattice. It is the space over which selections are made.
+This is a starting point for implementation, not a final decision about Prismal's canonical representation or structural formalism, which REFERENCE-PRISMAL-003 still leaves open.
+
+The carrier itself has no geometry, no scale, and no preferred lattice. It is the space over which selections are made.
 
 This directly expresses REFERENCE-PRISMAL-003's model: the substrate is the structure over which adjacency and neighborhood relationships can be evaluated, prior to any named lattice interpretation.
 
@@ -82,7 +84,7 @@ BCC can also be understood as two interleaved SC sublattices — `Z^3` and `Z^3 
 
 ### Why three rules, not three structures
 
-SC, BCC, and FCC are not three different data structures. They are three different selections over the same `Z^3` substrate. The substrate does not change. The neighbor function changes. This is the direct expression of REFERENCE-PRISMAL-003's core model, and it is the reason `SelectionRule` is a parameter rather than a type.
+SC, BCC, and FCC are not three different data structures. They are three different selections over the same `Z^3` carrier. The carrier does not change. The neighbor function changes. This is the direct expression of REFERENCE-PRISMAL-003's core model, and it is the reason `SelectionRule` is a parameter rather than a type.
 
 ## Geometry Ratios
 
