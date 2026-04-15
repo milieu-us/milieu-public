@@ -3,7 +3,7 @@
 - **ID:** ARCHITECTURE-PRISMAL-000
 - **Status:** Working Draft
 - **Created:** 2026-04-13
-- **Updated:** 2026-04-13
+- **Updated:** 2026-04-14
 
 ## Intent
 
@@ -56,7 +56,7 @@ Core's first responsibility is to answer questions about the substrate correctly
 Any engine or platform that consumes Core must provide:
 
 - a unit scale `a` — the distance in host-space units corresponding to one nearest-neighbor step
-- a coordinate mapping — how Core's current first-implementation integer carrier coordinates map to positions in the host environment
+- a coordinate mapping — how Core's current first-implementation `Z^3` index-space coordinates map to positions in the host environment
 
 Core does not provide these. They are injected by the adapter.
 
