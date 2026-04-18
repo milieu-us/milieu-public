@@ -3,7 +3,7 @@
 - **ID:** ARCHITECTURE-PRISMAL-EXPERIMENT-001
 - **Status:** Working Draft
 - **Created:** 2026-04-13
-- **Updated:** 2026-04-13
+- **Updated:** 2026-04-18
 
 ## Intent
 
@@ -15,7 +15,23 @@ This document does not repeat the decision rationale. It does not provide a task
 
 The current implementation uses Unreal Engine 5.7, within the PrismalExperimental project.
 
-This is a contingent fact, not a foundational constraint. Future harness implementations may use other engines. Constraints in this document that are universal are marked as such. Constraints that are Unreal-specific are marked accordingly.
+This is a contingent fact, not a foundational constraint. Future harness implementations may use other engines. Constraints in this document that are universal are marked as such. Constraints that are host-specific are marked accordingly.
+
+## Module Structure
+
+The PrismalExperimental project uses two modules. This structure is a prerequisite for all harness implementation work and must be established before any harness components are written.
+
+**PrismalCore** — a pure C++ module with no host engine dependencies. This is where the substrate geometry and lattice view machinery lives, as specified in ARCHITECTURE-PRISMAL-001. It must not reference PrismalExperimental or any host engine type.
+
+**PrismalExperimental** — the host engine module. This is where the harness components, adapter code, and all UE5-specific implementation lives. It depends on PrismalCore. PrismalCore does not depend on it.
+
+The physical separation into two modules enforces the no-engine-dependencies constraint at build time rather than by convention. This is a deliberate choice: agents are better at respecting structural boundaries than social ones.
+
+When PrismalCore eventually moves to a standalone library, it should require no changes to the Core code itself. If changes are needed at that point, the boundary was not being respected during the experimental phase.
+
+**Universal constraint:** nothing in PrismalCore may include a host engine header or reference a host engine type, even while physically residing in the host project.
+
+**UE5 constraint:** PrismalCore is registered as a separate module in the `.uproject` and has its own `Build.cs`. PrismalExperimental's `Build.cs` lists PrismalCore as a public dependency.
 
 ## Component Structure
 
@@ -156,6 +172,7 @@ The following are intentionally deferred. They will be addressed in later docume
 ## Related
 
 - ARCHITECTURE-PRISMAL-EXPERIMENT-000 - Founding document for this family
+- ARCHITECTURE-PRISMAL-001 - Prismal Core First Implementation Context
 - DECISION-PRISMAL-EXPERIMENT-001 - Prismal Experimental Test Harness
 - DECISION-PRISMAL-EXPERIMENT-000 - Initial Architecture Spike and Layering Constraints
 - REFERENCE-DEVEX-UNREAL-000 - Developer Experience for Unreal Engine
