@@ -38,6 +38,19 @@ A DECISION answers:
 
 Why was this chosen?
 
+### ARCHITECTURE
+<TODO>
+
+### OPERATIONS
+
+An OPERATIONS record captures practical, reproducible guidance for running, supporting, validating, troubleshooting, or maintaining systems and workflows in practice.
+
+- Practical and execution-oriented
+- May depend on DECISION, POLICY, or ARCHITECTURE records
+- Should be usable by human agents, AI agents, and system agents
+
+An OPERATIONS record answers: How is this actually carried out, supported, or recovered in practice?
+
 ### REFERENCE
 
 A REFERENCE captures supporting knowledge used for understanding.
@@ -54,15 +67,19 @@ What information helps us understand this?
 
 - RECORD: normative, defines current state, high stability
 - DECISION: contextual, explains change and reasoning, medium stability
+- ARCHITECTURE: <TODO>
+- OPERATIONS: practical execution and support
 - REFERENCE: descriptive, supports understanding, flexible stability
 
 ## Metadata Expectations
 
 Each type may carry different supporting information.
 
-- RECORDS prioritize clarity of current state
-- DECISIONS prioritize rationale and consequences
-- REFERENCES prioritize context and sources
+- RECORDS: prioritize clarity of current state
+- DECISIONS: prioritize rationale and consequences
+- ARCHITECTURE: <TODO>
+- OPERATIONS: <TODO>
+- REFERENCES: prioritize context and sources
 
 Metadata should remain minimal and evolve through use.
 
