@@ -68,7 +68,7 @@ What information helps us understand this?
 - RECORD: normative, defines current state, high stability
 - DECISION: contextual, explains change and reasoning, medium stability
 - ARCHITECTURE: <TODO>
-- OPERATIONS: practical execution and support
+- OPERATIONS: practical, execution and support oriented, reproducible in use, medium stability
 - REFERENCE: descriptive, supports understanding, flexible stability
 
 ## Metadata Expectations
@@ -78,7 +78,7 @@ Each type may carry different supporting information.
 - RECORDS: prioritize clarity of current state
 - DECISIONS: prioritize rationale and consequences
 - ARCHITECTURE: <TODO>
-- OPERATIONS: <TODO>
+- OPERATIONS: prioritize applicability, repeatability, and validation
 - REFERENCES: prioritize context and sources
 
 Metadata should remain minimal and evolve through use.
