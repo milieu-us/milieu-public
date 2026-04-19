@@ -5,6 +5,8 @@
 - **Created:** 2026-04-13
 - **Updated:** 2026-04-18
 
+> **Terminology note:** "profile" in this document always means a harness rendering profile — a named set of rendering and scalability conditions applied during a test run. This is distinct from the service sandbox profiles defined in REFERENCE-OPERATIONS-001, which use the same word for a different concept.
+
 ## Intent
 
 Carry the implementation context needed by any agent — human, AI, or system — to begin implementing the Prismal™ test harness as decided in DECISION-PRISMAL-EXPERIMENT-001.
@@ -39,17 +41,17 @@ The harness consists of two collaborating components. They are separated because
 
 ### Harness Controller
 
-The Harness Controller is responsible for applying a named profile to the current session and reporting that a profile has been applied.
+The Harness Controller is responsible for applying a named harness rendering profile to the current session and reporting that a profile has been applied.
 
 Its concerns are:
 
-- knowing which profiles exist
-- applying the correct conditions for a named profile
-- making the active profile observable (logged, visible, or otherwise inspectable)
+- knowing which harness rendering profiles exist
+- applying the correct conditions for a named harness rendering profile
+- making the active harness rendering profile observable (logged, visible, or otherwise inspectable)
 
 It is not responsible for camera movement, scene setup, or observation capture.
 
-**Universal constraint:** the Harness Controller must apply profiles explicitly. It must not read or rely on ambient engine state.
+**Universal constraint:** the Harness Controller must apply harness rendering profiles explicitly. It must not read or rely on ambient engine state.
 
 **UE5 constraint:** profile application is implemented through Scalability settings and Console Variable (CVar) overrides. These must be set programmatically at runtime, not relied upon from editor project settings.
 
@@ -67,11 +69,11 @@ It is not responsible for profile application or observation capture.
 
 **Universal constraint:** the camera path must be fully deterministic. Given the same sequence definition, the path must produce identical viewpoints on every run.
 
-## Profile Schema
+## Harness Rendering Profile Schema
 
-Each named profile defines a complete set of rendering and scalability conditions. A profile is not a delta from a default — it is a full specification.
+Each harness rendering profile defines a complete set of rendering and scalability conditions. A harness rendering profile is not a delta from a default — it is a full specification.
 
-Current profiles required by DECISION-PRISMAL-EXPERIMENT-001:
+Current harness rendering profiles required by DECISION-PRISMAL-EXPERIMENT-001:
 
 ### Reference Profile
 
@@ -129,7 +131,7 @@ Each harness run must produce output that is parseable by another agent without 
 
 Minimum required per run:
 
-- profile name applied
+- harness rendering profile name applied
 - engine and project version
 - timestamp
 - one or more viewpoint captures (screenshots or equivalent)
@@ -139,11 +141,13 @@ The stub observation record format is not yet formalized. Until it is, the minim
 
 This is intentionally minimal. Formalization is deferred until patterns emerge from actual use.
 
+Harness observation runs are also expected to produce early evidence toward the open question in REFERENCE-OPERATIONS-001 of how Unreal Engine workflows integrate with Milieu's service sandbox model. Agents working on that question should treat harness observations as a relevant data source.
+
 ## Relationships Between Components
 
 The Harness Controller and Camera Path Actor are independent actors. They coordinate through a simple sequencing contract:
 
-1. Harness Controller applies profile
+1. Harness Controller applies harness rendering profile
 2. Harness Controller signals ready
 3. Camera Path Actor executes sequence
 4. Camera Path Actor signals complete
@@ -176,3 +180,4 @@ The following are intentionally deferred. They will be addressed in later docume
 - DECISION-PRISMAL-EXPERIMENT-001 - Prismal Experimental Test Harness
 - DECISION-PRISMAL-EXPERIMENT-000 - Initial Architecture Spike and Layering Constraints
 - REFERENCE-DEVEX-UNREAL-000 - Developer Experience for Unreal Engine
+- REFERENCE-OPERATIONS-001 - Service Sandbox Profiles
