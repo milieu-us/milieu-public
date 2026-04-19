@@ -53,7 +53,7 @@ It is not responsible for camera movement, scene setup, or observation capture.
 
 **Universal constraint:** the Harness Controller must apply harness rendering profiles explicitly. It must not read or rely on ambient engine state.
 
-**UE5 constraint:** profile application is implemented through Scalability settings and Console Variable (CVar) overrides. These must be set programmatically at runtime, not relied upon from editor project settings.
+**UE5 constraint:** harness rendering profile application is implemented through Scalability settings and Console Variable (CVar) overrides. These must be set programmatically at runtime, not relied upon from editor project settings.
 
 ### Camera Path Actor
 
