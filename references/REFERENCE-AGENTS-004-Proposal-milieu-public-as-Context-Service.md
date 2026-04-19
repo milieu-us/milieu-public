@@ -1,4 +1,4 @@
-# REFERENCE-AGENTS-004 — Proposal: milieu-public as a Context Distribution Service
+# REFERENCE-AGENTS-004 — Proposal: milieu-public as Canonical Context Publisher
 
 - **ID:** REFERENCE-AGENTS-004
 - **Status:** Proposal — Needs Review
@@ -7,79 +7,87 @@
 
 ## Intent
 
-Surface a reframing of milieu-public's role that emerged during early subtree testing, and propose a DECISION be opened to settle it before the subtree pattern is adopted at scale.
+Surface a reframing of milieu-public's role that emerged during early subtree testing, and propose a DECISION be opened to settle it before the current pattern spreads.
 
-This document is a proposal, not a decision. It is written for Boss and any other agent with standing over milieu-public's architecture.
+This document is a proposal, not a decision. It is written for agents with standing over milieu-public's architecture and operating model.
 
 ## What Surfaced
 
 During the first subtree test (PrismalExperimental PR #1), a question emerged about where the vendor update script belongs.
 
-The script (`update-milieu-public.sh`) currently lives in PrismalExperimental — the downstream consumer. If milieu-public acquires more downstream consumers (other repos, RAG pipelines, model training corpora), each would need to independently know how to pull from milieu-public correctly. That is a coupling problem: every consumer encodes the carrier mechanics, not just the subscription intent.
+The script (`update-milieu-public.sh`) currently lives in PrismalExperimental — the downstream consumer. If milieu-public acquires more downstream consumers (other repos, retrieval systems, vector stores, model training corpora, or future carriers), each would need to independently know how to stay current with milieu-public correctly.
 
-The reframing: if milieu-public is a **context distribution service**, the update mechanics belong to the service, not to the consumers.
+That is a coupling problem. Every consumer ends up encoding carrier mechanics, not just subscription intent.
+
+## Proposed Reframing
+
+milieu-public appears to be evolving from a passive shared record archive toward a canonical context publisher.
+
+That does not yet require a heavy runtime service.
+
+It does suggest that milieu-public should own, or at least define, the canonical subscription pattern by which downstream consumers declare dependency and stay current.
 
 ## The Distinction
 
-### milieu-public as a shared record archive
+### milieu-public as shared record archive
 
 - holds documents
 - consumers figure out their own access patterns
-- no defined subscriber interface
+- no defined subscriber pattern
 - update mechanics are the consumer's problem
 
-### milieu-public as a context distribution service
+### milieu-public as canonical context publisher
 
 - holds documents
-- defines a subscriber interface: how a downstream consumer declares a dependency and stays current
-- owns the update mechanics (or at least the canonical form of them)
-- consumers declare intent, not implementation
+- defines a stable subscription pattern for downstream consumers
+- owns the canonical form of the update mechanics, even if the mechanics are lightweight
+- lets consumers declare intent, not invent their own distribution logic
 
-The difference matters most when carriers change. Git subtree is today's carrier. The same semantic pattern will be needed when the carrier is a RAG corpus, a vector store, or a model training dataset. If consumers own the mechanics, each carrier transition requires updating every consumer. If the service owns the interface, the transition is localized.
+The difference matters most when carriers change. Git subtree is today's carrier. The same semantic pattern may later need to support retrieval systems, vector stores, model training corpora, or other future carriers. If consumers own the mechanics, each carrier transition requires updating every consumer separately. If milieu-public owns the canonical pattern, the transition can stay localized.
 
 ## The Provenance Angle
 
-The subtree pattern gives each downstream consumer a versioned snapshot with a known commit hash. That commit hash is the current provenance primitive — it lets any agent (or any test run) say "I was operating against this specific version of shared context."
+The subtree pattern gives each downstream consumer a versioned snapshot with a known commit hash. That commit hash is the current provenance primitive. It lets any agent, run, or test result say: "I was operating against this specific version of shared context."
 
-This is especially important for multi-variant testing: if two model variants behave differently, the first question is whether they were trained or prompted against the same context version. Without provenance, that question cannot be answered.
+This matters immediately for comparison and debugging. If two model variants behave differently, or if two implementation branches diverge, the first question is whether they were operating against the same context version.
 
-The service framing extends this naturally: the service owns the version identifier, and every consumer's snapshot is traceable to it. Consumers do not need to invent their own versioning.
+The publisher framing extends this naturally: milieu-public owns the source version identifier, and every downstream snapshot remains traceable to it. Consumers do not need to invent their own provenance mechanism.
 
 ## What This Does Not Settle
 
-This proposal does not know:
+This proposal does not yet settle:
 
-- whether milieu-public should become a formal service with a defined interface, or whether a lighter convention (a canonical script location, a documented subscription pattern) is sufficient
-- whether the subtree mechanism is the right carrier long-term, or whether it is a good-enough starting point that a DECISION should ratify before replacing
-- how the service interface interacts with non-Git consumers (RAG, vector, model training)
-- whether a separate repo or a subdirectory within milieu-public is the right home for the subscriber interface
+- whether milieu-public should become a formal service with a defined interface, or whether a lighter convention is sufficient
+- whether Git subtree is the right long-term carrier, or just the current starting point
+- how the canonical subscription pattern should work for non-Git consumers
+- whether the update mechanics belong in a separate repo, a subdirectory within milieu-public, or another shared surface
 
-These are the questions that need Boss's input and likely a DECISION to settle.
+These questions need review and likely a DECISION.
 
 ## What the Test Already Showed
 
 PrismalExperimental PR #1 is a working test of the subtree pattern. It showed:
 
-- the vendored snapshot is legible to agents (the AGENTS.md update script guidance worked)
+- the vendored snapshot is legible to agents
 - the commit hash is present and attributable
 - the update script runs correctly
-- the PR gate on the downstream side controls when context updates are accepted
+- the downstream gate controls when context updates are accepted
 
-The test did not show whether this pattern scales cleanly to multiple consumers, or whether the script ownership question matters in practice yet.
+The test did not show whether the current ownership pattern scales cleanly to multiple consumers, or whether the canonical subscription pattern should live upstream yet.
 
-The recommendation is to treat PR #1 as evidence, not throwaway. The learning is real. The implementation may be revised by a DECISION, but the observations stand.
+The recommendation is to treat PR #1 as evidence, not throwaway. The learning is real even if the implementation pattern changes.
 
 ## What We Are Asking
 
-1. Is the service reframing the right mental model for milieu-public, or is there a better framing?
-2. Should a DECISION be opened to settle this before the subtree pattern spreads to more consumers?
-3. Where should the subscriber interface (update mechanics, canonical script or equivalent) live?
-4. Does the provenance requirement change how milieu-public should version its own snapshots?
+1. Is canonical context publisher the right framing for milieu-public, or is there a better one?
+2. Should a DECISION be opened now, before the current subtree pattern spreads further?
+3. Where should the canonical subscription pattern live?
+4. Does the provenance requirement change how milieu-public should version or package its own snapshots?
 
 ## Related
 
 - REFERENCE-AGENTS-002 — Carried Context (context propagation and provenance open questions)
 - REFERENCE-AGENTS-003 — Agent Coordination Model
-- PrismalExperimental PR #1 — first subtree test (vendored snapshot + update script)
+- PrismalExperimental PR #1 — first subtree test (vendored snapshot plus update script)
 - DECISION-OPERATIONS-CHANGE-000 — Change Proposals and Acceptance
 - DECISION-OPERATIONS-CHANGE-001 — Git-Based Change Proposal Workflow
