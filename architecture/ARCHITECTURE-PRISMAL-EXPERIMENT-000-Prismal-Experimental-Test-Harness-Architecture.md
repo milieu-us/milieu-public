@@ -3,7 +3,7 @@
 - **ID:** ARCHITECTURE-PRISMAL-EXPERIMENT-000
 - **Status:** Working Draft
 - **Created:** 2026-04-13
-- **Updated:** 2026-04-18
+- **Updated:** 2026-04-19
 
 > **Terminology note:** "profile" in this document always means a harness rendering profile — a named set of rendering and scalability conditions applied during a test run. This is distinct from the service sandbox profiles defined in REFERENCE-OPERATIONS-001, which use the same word for a different concept.
 
@@ -65,8 +65,13 @@ The engine is an adapter for Prismal Core, not the source of truth. Harness impl
 
 ## Open Questions
 
-- Should engine-specific architecture documents live under this family (e.g., ARCHITECTURE-PRISMAL-EXPERIMENT-UE5-000) or should engine specifics be carried within numbered documents like ARCHITECTURE-PRISMAL-EXPERIMENT-001?
 - When does an experimental harness finding warrant promotion to a constraint in this founding document?
+
+## Closed Questions
+
+**Should engine-specific architecture documents use a sub-family (e.g., ARCHITECTURE-PRISMAL-EXPERIMENT-UE5-000) or carry engine specifics within numbered documents?**
+
+Resolved: engine specifics are carried within sections of numbered documents, not in a separate sub-family. Engine-specific content is marked with explicit constraint labels (e.g., **UE5 constraint:**) within the same document. A sub-family would introduce namespace bloat and fragment continuity without providing clarity benefits. If a future engine requires substantially different foundational architecture, this question should be reopened.
 
 ## Related
 

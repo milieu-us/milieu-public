@@ -3,7 +3,7 @@
 - **ID:** ARCHITECTURE-PRISMAL-EXPERIMENT-001
 - **Status:** Working Draft
 - **Created:** 2026-04-13
-- **Updated:** 2026-04-18
+- **Updated:** 2026-04-19
 
 > **Terminology note:** "profile" in this document always means a harness rendering profile — a named set of rendering and scalability conditions applied during a test run. This is distinct from the service sandbox profiles defined in REFERENCE-OPERATIONS-001, which use the same word for a different concept.
 
@@ -25,7 +25,7 @@ The PrismalExperimental project uses two modules. This structure is a prerequisi
 
 **PrismalCore** — a pure C++ module with no host engine dependencies. This is where the substrate geometry and lattice view machinery lives, as specified in ARCHITECTURE-PRISMAL-001. It must not reference PrismalExperimental or any host engine type.
 
-**PrismalExperimental** — the host engine module. This is where the harness components, adapter code, and all UE5-specific implementation lives. It depends on PrismalCore. PrismalCore does not depend on it.
+**PrismalExperimental** — the host engine module. This is where the harness components, adapter code, and all host-specific implementation lives. It depends on PrismalCore. PrismalCore does not depend on it.
 
 The physical separation into two modules enforces the no-engine-dependencies constraint at build time rather than by convention. This is a deliberate choice: agents are better at respecting structural boundaries than social ones.
 
