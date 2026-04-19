@@ -3,7 +3,7 @@
 ID: REFERENCE-AGENTS-002
 Status: Working Draft
 Created: 2026-04-11
-Updated: 2026-04-11
+Updated: 2026-04-19
 
 ## Intent
 
@@ -149,6 +149,10 @@ Likewise, a chat interface, development environment, or agent runtime may carry 
 - How should carried context be expressed when the primary artifact is not text?
 - When should a carrier be considered authoritative versus partial?
 - Does later evidence justify a broader Milieu-level reference?
+- What is the operational mechanism for delivering Carried Context to an agent at session start? The current approach — expecting the agent to fetch context from an upstream repository — fails when the agent lacks network access or cannot discover the relevant documents. A generated orientation bundle committed to the working repository is one candidate, but the right pattern has not yet been established through use.
+- How should upstream architecture records be made observable to agents working in downstream repositories that may not have direct access to the source? This surfaced concretely when a Rider agent working in PrismalExperimental could not fetch ARCHITECTURE documents from milieu-public, correctly refused to proceed without them, and had to be given the content manually.
+- How does Carried Context propagate when it changes? When a source record is updated, every downstream consumer — other repositories, RAG pipelines, vector stores, model training corpora — needs to receive the change. Git-based snapshot sync with a PR gate is the current mechanism. Future carrier technologies will need equivalent propagation mechanisms with the same gate semantics: the consumer controls when it accepts an upstream context change, not the producer. The right general pattern is not yet established.
+- How is context provenance tracked across carrier transitions? When context moves from a Git record into a model training corpus, a vector store, or a tensor-based representation, the original source version must remain traceable. A model training run, agent session, or test variant that depends on a specific version of shared context must be able to record which version it used. The Git commit hash of a vendored snapshot is the current provenance primitive. Future carriers will need equivalent versioning. This is especially important for multi-variant testing, where different variants must be attributable to specific context states to produce meaningful comparisons.
 
 ## Related
 
