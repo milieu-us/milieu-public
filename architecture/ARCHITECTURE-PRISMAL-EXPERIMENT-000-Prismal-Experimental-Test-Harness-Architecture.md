@@ -74,4 +74,5 @@ The engine is an adapter for Prismal Core, not the source of truth. Harness impl
 - DECISION-PRISMAL-EXPERIMENT-001 - Prismal Experimental Test Harness
 - ARCHITECTURE-PRISMAL-EXPERIMENT-001 - Test Harness - First Implementation Context
 - REFERENCE-PRISMAL-000 - Prismal Space Current View and Open Questions
+- REFERENCE-PRISMAL-DEMO-000 - Planet Biome Demo Proposal
 - REFERENCE-PRISMAL-003 - Unified Lattice Substrate and Selection Model
