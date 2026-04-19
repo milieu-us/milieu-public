@@ -57,7 +57,7 @@ It is not responsible for camera movement, scene setup, or observation capture.
 
 ### Camera Path Actor
 
-The Camera Path Actor is responsible for moving through a defined sequence of positions and orientations so that identical viewpoints are observed under each profile.
+The Camera Path Actor is responsible for moving through a defined sequence of positions and orientations so that identical viewpoints are observed under each harness rendering profile.
 
 Its concerns are:
 
@@ -65,7 +65,7 @@ Its concerns are:
 - executing that sequence deterministically
 - signaling when a sequence is complete
 
-It is not responsible for profile application or observation capture.
+It is not responsible for harness rendering profile application or observation capture.
 
 **Universal constraint:** the camera path must be fully deterministic. Given the same sequence definition, the path must produce identical viewpoints on every run.
 
