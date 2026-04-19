@@ -3,7 +3,7 @@
 ID: REFERENCE-AGENTS-002
 Status: Working Draft
 Created: 2026-04-11
-Updated: 2026-04-11
+Updated: 2026-04-19
 
 ## Intent
 
@@ -149,6 +149,8 @@ Likewise, a chat interface, development environment, or agent runtime may carry 
 - How should carried context be expressed when the primary artifact is not text?
 - When should a carrier be considered authoritative versus partial?
 - Does later evidence justify a broader Milieu-level reference?
+- What is the operational mechanism for delivering Carried Context to an agent at session start? The current approach — expecting the agent to fetch context from an upstream repository — fails when the agent lacks network access or cannot discover the relevant documents. A generated orientation bundle committed to the working repository is one candidate, but the right pattern has not yet been established through use.
+- How should upstream architecture records be made observable to agents working in downstream repositories that may not have direct access to the source? This surfaced concretely when a Rider agent working in PrismalExperimental could not fetch ARCHITECTURE documents from milieu-public, correctly refused to proceed without them, and had to be given the content manually.
 
 ## Related
 
