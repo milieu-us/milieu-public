@@ -3,7 +3,9 @@
 - **ID:** ARCHITECTURE-PRISMAL-EXPERIMENT-000
 - **Status:** Working Draft
 - **Created:** 2026-04-13
-- **Updated:** 2026-04-13
+- **Updated:** 2026-04-18
+
+> **Terminology note:** "profile" in this document always means a harness rendering profile — a named set of rendering and scalability conditions applied during a test run. This is distinct from the service sandbox profiles defined in REFERENCE-OPERATIONS-001, which use the same word for a different concept.
 
 ## Intent
 
@@ -13,7 +15,7 @@ This document is the first anchor in the ARCHITECTURE-PRISMAL-EXPERIMENT family.
 
 ## Context
 
-DECISION-PRISMAL-EXPERIMENT-000 established that Prismal development proceeds through constrained experiments organized into three layers: Core, Engine Adapters, and Exploration. DECISION-PRISMAL-EXPERIMENT-001 established that experimental work requires a structured test harness to support profile-based comparison across rendering regimes.
+DECISION-PRISMAL-EXPERIMENT-000 established that Prismal development proceeds through constrained experiments organized into three layers: Core, Engine Adapters, and Exploration. DECISION-PRISMAL-EXPERIMENT-001 established that experimental work requires a structured test harness to support comparison across rendering regimes using named harness rendering profiles.
 
 This architecture family carries the implementation context needed to work within those decisions. It does not restate the decisions or their rationale. It exists because the gap between a decision and working code is where shared understanding most often gets lost.
 
@@ -37,15 +39,15 @@ The test harness exists to compare Prismal behavior across different conditions.
 
 Harness components must be simple, explicit, and inspectable.
 
-### Profile Explicitness
+### Harness Rendering Profile Explicitness
 
-Rendering and scalability conditions must be applied through named, explicitly defined profiles.
+Rendering and scalability conditions must be applied through named, explicitly defined harness rendering profiles.
 
 Implicit reliance on editor defaults or ambient state is not permitted.
 
 ### Scene Invariance
 
-The scene under test must be identical across profile runs. Only the applied profile may vary between comparison runs.
+The scene under test must be identical across harness rendering profile runs. Only the applied harness rendering profile may vary between comparison runs.
 
 ### Observation Parsability
 
@@ -72,4 +74,5 @@ The engine is an adapter for Prismal Core, not the source of truth. Harness impl
 - DECISION-PRISMAL-EXPERIMENT-001 - Prismal Experimental Test Harness
 - ARCHITECTURE-PRISMAL-EXPERIMENT-001 - Test Harness - First Implementation Context
 - REFERENCE-PRISMAL-000 - Prismal Space Current View and Open Questions
+- REFERENCE-PRISMAL-DEMO-000 - Planet Biome Demo Proposal
 - REFERENCE-PRISMAL-003 - Unified Lattice Substrate and Selection Model

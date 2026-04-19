@@ -161,6 +161,7 @@ These are intentionally deferred. They will be addressed through later documents
 ## Related
 
 - ARCHITECTURE-PRISMAL-000 — Founding document for this family
+- REFERENCE-PRISMAL-000 — Prismal Space Current View and Open Questions
 - REFERENCE-PRISMAL-001 — Field, Lattice, and Projection
 - REFERENCE-PRISMAL-003 — Unified Lattice Substrate and Selection Model
 - REFERENCE-PRISMAL-GEOMETRY-000 — Sphere Geometry Derivation
