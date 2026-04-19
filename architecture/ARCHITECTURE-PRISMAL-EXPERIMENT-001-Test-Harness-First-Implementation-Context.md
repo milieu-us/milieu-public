@@ -179,5 +179,7 @@ The following are intentionally deferred. They will be addressed in later docume
 - ARCHITECTURE-PRISMAL-001 - Prismal Core First Implementation Context
 - DECISION-PRISMAL-EXPERIMENT-001 - Prismal Experimental Test Harness
 - DECISION-PRISMAL-EXPERIMENT-000 - Initial Architecture Spike and Layering Constraints
+- REFERENCE-PRISMAL-000 - Prismal Space Current View and Open Questions
+- REFERENCE-PRISMAL-DEMO-000 - Planet Biome Demo Proposal
 - REFERENCE-DEVEX-UNREAL-000 - Developer Experience for Unreal Engine
 - REFERENCE-OPERATIONS-001 - Service Sandbox Profiles

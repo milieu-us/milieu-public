@@ -78,6 +78,7 @@ The first adapter is currently being built for Unreal Engine 5 within the Prisma
 
 ## Related
 
+- REFERENCE-PRISMAL-000 — Prismal Space Current View and Open Questions
 - REFERENCE-PRISMAL-001 — Field, Lattice, and Projection
 - REFERENCE-PRISMAL-003 — Unified Lattice Substrate and Selection Model
 - REFERENCE-PRISMAL-GEOMETRY-000 — Sphere Geometry Derivation
