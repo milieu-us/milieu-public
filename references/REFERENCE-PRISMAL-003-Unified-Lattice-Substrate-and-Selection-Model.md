@@ -3,297 +3,277 @@
 - **ID:** REFERENCE-PRISMAL-003
 - **Status:** Working Draft
 - **Created:** 2026-04-09
-- **Updated:** 2026-04-10
+- **Updated:** 2026-04-21
 
 ## Intent
 
-Capture a conceptual model for reasoning about lattice structures as derived views over an underlying substrate.
+The intent of REFERENCE-PRISMAL-003 is to specify the **substrate kernel** and **representation stack** for Prismal Space™: the local geometric rule that defines "where things can be," the global lattice realizations of that rule in 3D, and the sanctioned views and behavior profiles built on top of those choices.
 
-This reference explores whether commonly referenced lattices such as Simple Cubic, Body-Centered Cubic, Face-Centered Cubic, and related structures may be understood through primitive selection and selection rules rather than as separate foundational systems.
+This document is the bridge between the principles and multi-scale framing in REFERENCE-PRISMAL-000/001/002 and concrete architecture/implementation work at the substrate and view layer.
 
-## Use and Status
+We assume the reader:
 
-This reference may inform Prismal Space where multiple lattice views, primitive selections, or substrate interpretations are involved.
+- Has internalized the core constraints ("nothing unbounded, nothing implicit, nothing unobservable") and the multi-scale story.
+- Is now asking: *what is the concrete geometric object we commit to as our substrate, how is it represented, and how do all the user-facing "grids" derive from it?*
 
-It does not decide Prismal's canonical data structure.
+Everything here is scoped to that layer. Higher-dimensional details (D4, E8, Leech) and full material behavior models are pointed to, but not exhausted.
 
-In particular, this record does not yet determine:
+## S – Substrate Kernel
 
-- whether Prismal should use FCC, `Z^3`, a combinatorial complex, or another substrate as its canonical representation
-- whether named lattice views should be stored directly or derived from a lower-level substrate
-- how selection rules should be represented in runtime systems
-- how this model connects to structural constraints, joinery, material behavior, or play
+### Local simplex-based close packing
 
-Those questions remain open and should be resolved through later decisions and implementation evidence.
+The substrate kernel **S** is defined by a **local close-packing rule** rather than by a named lattice. In every dimension we care about, the minimal non-degenerate configuration is a **simplex**:
 
-## Core Model
+- In 2D: three mutually touching circles form an **equilateral triangle** of centers.
+- In 3D: four mutually touching spheres form a **regular tetrahedron** of centers, realized as "three in a triangle, plus a fourth in the tetrahedral void above or below the plane."
 
-In this model, a lattice view is described by:
+The kernel’s rule is:
 
-- a substrate
-- a primitive selection
-- a selection rule
+> Space is populated by equal spheres such that local neighborhoods are built from these simplex motifs (triangles in 2D, tetrahedra in 3D, and their higher-D analogues), with each sphere participating in a maximally dense local arrangement.
 
-The substrate describes what relationships are available before interpretation.
+In 3D, repeatedly "adding the fourth sphere into a tetrahedral void" generates all **Barlow packings**: the family of close-packed stackings that includes both FCC and HCP as regular global patterns. The kernel is **this local simplex rule**, not any particular global stacking.
 
-Primitive selection determines which kind of element is foregrounded.
+### Kernel as lattice + simplicial complex
 
-The selection rule determines which subset or arrangement of those elements is being read as the view.
+We represent **S** as a combination of:
 
-A view is derived from the substrate for a purpose. It is not automatically the canonical substrate itself.
+- A **close-packed point set** **P**: centers of spheres that obey the simplex-based local rule.
+- A **simplicial complex** **K** over **P**:
+  - In 2D: a triangulation whose faces connect mutually neighboring sphere centers.
+  - In 3D: a tetrahedral complex (e.g., Delaunay tetrahedralization) whose tetrahedra capture which spheres are mutual neighbors.
 
-Many common lattice systems may then be understood as specific views produced from those components.
+This gives us:
 
-## Relationship to Prior Prismal References
+- A discrete **neighbor graph** (which spheres are kissing neighbors).
+- Explicit **simplex cells** (triangles/tetrahedra) that form the minimal local units of space.
+- Implicit **void types** (tetrahedral and octahedral voids in 3D) as complementary structure.
 
-This reference extends rather than replaces prior Prismal references.
+Crucially, none of this yet chooses between FCC or HCP; any close-packed stacking that respects the local rule yields a point set whose Voronoi–Delaunay structures instantiate the same kind of kernel.
 
-It is intended to sit alongside:
+### Coordinate representation for S
 
-- REFERENCE-PRISMAL-001, which frames Prismal Space as a discrete realization of an underlying continuum and treats FCC adjacency as the current working model
-- REFERENCE-PRISMAL-002, which focuses on structural constraints, joinery, and playable assembly
+At the kernel level, coordinates exist in two nested forms:
 
-This document generalizes how multiple lattice interpretations may be derived from a shared substrate. It does not by itself overturn the current working preference for FCC-oriented reasoning where that remains the most useful local model.
+- **Global lattice-like basis**
 
-The model may have uses beyond Prismal. It is preserved here because Prismal currently provides the clearest local reason to examine substrate/view separation, primitive selection, and selection-rule-based representation.
+  We choose a small set of basis vectors appropriate to close packing:
 
-## Substrate Hypothesis
+  - In 2D: two basis vectors generating a hexagonal (triangular) lattice.
+  - In 3D: two basis vectors spanning a hexagonal layer, plus a stacking direction.
 
-The substrate is a connectivity structure independent of any one named lattice interpretation.
+  Points in **P** are expressed as **fractional coordinates** in this basis. We treat these as exact (integer + rational components), not as floating-point approximations.
 
-It is the structure over which adjacency, containment, neighborhood, and incidence relationships can be evaluated.
+- **Local barycentric coordinates on simplices**
 
-This record does not yet decide whether the substrate should be represented as:
+  Inside each simplex (triangle in 2D, tetrahedron in 3D), we use **barycentric coordinates** as the local coordinate system:
 
-- a graph
-- a fixed lattice with known neighbor relationships
-- a cell complex
-- another discrete or combinatorial structure
+  A point **x** in a tetrahedron with vertices **v_0** through **v_3** is defined as a weighted combination of those vertices, where the barycentric weights **λ_0** through **λ_3** sum to 1:
 
-For this reference, the important property is not the final storage form. The important property is that a substrate preserves relationships from which multiple views may be derived.
+  ```math
+  x = \sum_{i=0}^{3} \lambda_i v_i, \quad \sum_{i=0}^{3} \lambda_i = 1
+  ```
+  - Subdivision points (midpoints, centroids, etc.) are placed at **rational barycentric coordinates** (e.g., `(1/2, 1/2, 0, 0)`, `(1/4, 1/4, 1/4, 1/4)`), so all newly created vertices remain exact linear combinations of the original lattice basis.
 
-The following examples sit at different modeling layers and should not yet be treated as interchangeable peers:
+Refinement of **S** is defined as **barycentric subdivision** of **K**: we iteratively add new vertices at simplex barycenters or other rational barycentric positions and update the simplicial complex accordingly. This keeps all geometry:
 
-- index space, such as an integer grid (`Z^3`)
-- adjacency model, such as FCC neighborhood relationships
-- structural formalism, such as a graph, cell complex, or Prismal complex
+- Combinatorial at the top level (simplices and adjacency).
+- Exact at the coordinate level (fractional lattice coordinates + rational barycentric weights).
 
-## Substrate Invariants
+This is the core mathematical representation that later lattices, views, and behaviors build on.
 
-If this model is useful for Prismal, the substrate likely needs to preserve:
+## L – Lattice Realizations in 3D
 
-- stable identity for addressable elements
-- adjacency or neighborhood relationships
-- incidence relationships between primitives
-- enough structure to derive more than one lattice view
+### Global stackings of S in 3D
 
-These are candidate invariants, not final data-structure requirements.
+In 3D, repeatedly applying the local simplex rule to layers of spheres yields **close-packed stackings** of hexagonal layers. Each layer is a 2D triangular lattice of centers; the next layer sits in the tetrahedral voids of the previous one.
 
-A related Prismal research goal is to preserve enough continuity across scale to avoid treating each view as a disconnected system.
+Different consistent sequences of layer offsets give different global **Barlow packings**. Among these, two regular, highly symmetric realizations are:
 
-## Primitive Selections
+- **FCC (cubic close packed, “ABCABC…”)** — layers repeat every three steps in an ABC cycle, producing cubic symmetry.
+- **HCP (hexagonal close packed, “ABAB…”)** — layers alternate between A and B positions, producing hexagonal symmetry.
 
-A primitive selection chooses which dimensional elements of the substrate are foregrounded for a particular view or operation.
+Both:
 
-Examples include:
+- Have **coordination number 12** (each sphere touches 12 neighbors).
+- Achieve the **maximal packing fraction** of approximately 0.74.
+- Share the same local tetrahedral/octahedral void structure.
 
-- vertices
-- edges
-- faces
-- cells
-- interstitial positions
+From the kernel’s perspective, they are two global **solutions** of the same local constraints.
 
-Primitive selections are not necessarily separate stored systems. They may be different readings of the same underlying substrate.
+### FCC as default realization
 
-### Vertex View (0D)
+Prismal Space needs a specific 3D realization of **S** to serve as the default substrate in the initial implementation. We select **FCC** as this default lattice realization **L_3D** because:
 
-Foregrounds points and their adjacency.
+- It is a regular Barlow packing built from the simplex kernel with cubic symmetry.
+- Its **Voronoi cell** is the **rhombic dodecahedron**, a convex polyhedron with 12 congruent rhombic faces that tiles 3D space by translations.
+- It sits naturally inside a simple cubic coordinate frame as an index-2 sublattice (e.g., via parity constraints), which makes it easy to relate to conventional Cartesian views when needed.
 
-This may be useful for:
+Concretely, in this document:
 
-- position
-- minimal topology
+- When we refer to "the 3D lattice" without qualification, we mean "the FCC realization of the substrate kernel **S**."
+- The RD cell is the canonical Voronoi region of that lattice.
 
-### Edge View (1D)
+### HCP and other realizations (conceptual role)
 
-Foregrounds connections between vertices or sites.
+We explicitly acknowledge that **HCP** is another regular realization of **S** in 3D:
 
-This may be useful for:
+- It uses the same local kernel (hexagonal layers + tetrahedral voids).
+- It has the same packing fraction and coordination as FCC.
+- It differs in global symmetry and in the pattern of close-packed planes and slip systems, which gives rise to distinct material behaviors.
 
-- interaction
-- flow
-- constraint propagation
+At this stage:
 
-### Face View (2D)
+- We **do not** implement HCP as a separate substrate everywhere in the engine.
+- We **do** treat HCP as a legitimate global solution to the kernel, and as a reference for "HCP-like" behavior profiles over the FCC lattice (e.g., restricted slip families and anisotropy).
 
-Foregrounds surfaces bounded by edges.
+Other Barlow stackings (disordered or partially ordered sequences) are also solutions to the kernel’s constraints, but they are out of scope for 003. They belong in future work, once FCC and HCP have been fully integrated.
 
-This may be useful for:
+## H – Higher-Dimensional Analogues
 
-- boundaries
-- interfaces
-- contact regions
-- rendering surfaces
+### Why extrapolate beyond 3D
 
-### Cell View (3D)
+Prismal Space is not limited to modeling 3D physical volume. Many of the spaces we care about—configuration spaces, phase spaces, code spaces—are naturally higher-dimensional. The simplex-based kernel **S** and its lattice realizations have well-studied analogues in higher dimensions that serve as attractive candidates for those roles.
 
-Foregrounds volumes and their adjacency.
+We therefore design **S** to be **dimension-agnostic**: defined in terms of simplices, Voronoi–Delaunay structure, and local packing constraints, so that it can be instantiated consistently in 2D, 3D, 4D, 8D, 24D, and beyond.
 
-This may be useful for:
+### Canonical higher-D lattices that realize the kernel
 
-- occupancy
-- state
-- region-based simulation
+In higher dimensions, there are known lattice packings that play roles analogous to the 2D triangular and 3D FCC packings:
 
-Example:
+- **2D:** The **triangular (hexagonal) lattice** is the unique densest lattice packing of circles; this is the 2D shadow of our kernel and is already implicit in the 3D layer structure.
+- **4D:** The **D4** lattice is the canonical densest lattice packing in four dimensions, with a Voronoi cell and Delaunay simplices that generalize the 3D tetrahedral pattern.
+- **8D:** The **E8** lattice is the unique densest lattice packing in eight dimensions, with exceptional symmetry and a rich simplex-like local structure.
+- **24D:** The **Leech** lattice provides an even more symmetric 24-dimensional packing, central in coding theory and error-correcting codes.
 
-- rhombic dodecahedron as the Voronoi cell of FCC
+Each of these lattices can be analyzed via:
 
-### Interstitial View (Derived)
+- Sphere centers and their **Voronoi cells**.
+- The dual **Delaunay simplices** and neighbor graphs.
 
-Foregrounds void or constraint-derived positions within the structure.
+This makes them natural higher-D realizations of the same simplex-based kernel **S** we use in 3D.
 
-This may be useful for:
+### Scope boundary for this document
 
-- potential states
-- emergent positions
-- transition sites such as diffusion positions in materials
+REFERENCE-PRISMAL-003:
+
+- **Commits** to a kernel definition **S** that is compatible with these higher-D lattices.
+- **Fully specifies** the 3D realization **L_3D** (FCC) and the associated views and behavior profiles.
+- **Defers** the detailed treatment of D4, E8, and the Leech lattice—including their coordinate encodings, views, and higher-D behavior profiles—to **REFERENCE-PRISMAL-004**, which will extend the S/L/V/B pattern into those dimensions.
+
+## V – Views
+
+### Views as queries on a realization
+
+A **view** is a query or projection over a specific lattice realization **L** of **S**. Views may:
+
+- Change coordinate systems (e.g., lattice basis vs Cartesian axes).
+- Change visual metaphors (e.g., RD cells vs cubes vs layers).
+- Add indices, caches, or derived structures for tooling.
+
+Views may **not**:
+
+- Introduce new physics or adjacency not derivable from **S** and **L**.
+- Contradict fundamental invariants such as neighbor counts, distances, and volumes defined at the **S/L** level.
+
+Views may foreground different primitives: vertices (0D), edges (1D), faces (2D), cells (3D), or interstitial positions. The specific selection depends on the operation being performed (e.g., position, interaction, boundaries, occupancy, or void traversal).
+
+In 003 we focus on views over the 3D FCC realization **L_3D**.
+
+### Rhombic dodecahedral (RD) tiling view
+
+The primary physical view is the **rhombic dodecahedral tiling**:
+
+- We take the Voronoi cell of the FCC lattice, which in 3D is a rhombic dodecahedron with 12 congruent rhombic faces.
+- Translating this cell by lattice vectors tiles space without gaps or overlaps.
+- Each RD cell is treated as a canonical “chunk of space,” and its faces as identical interaction surfaces.
+
+This view is preferred when:
+
+- Modeling spatial adjacency and neighborhood.
+- Reasoning about volume, connectivity, and space-filling structures.
+- Presenting the substrate as a physically meaningful discretization of space, rather than as a coordinate grid.
+
+### Cartesian / simple cubic view
+
+The **Cartesian view** is a coordinate convenience, not the ontology:
+
+- We consider a simple cubic lattice **Z^3** (SC) with orthogonal axes.
+- The FCC realization is represented as an **index-2 sublattice** of **Z^3** (for example, points where **x + y + z** has a given parity).
+- Positions in **L_3D** can thus be indexed with simple integer triples together with a parity condition.
+
+This view is useful for:
+
+- Implementations that prefer array-like indexing.
+- Debugging and visualization where users expect orthogonal axes.
+- Interfacing with external systems that assume Cartesian coordinates.
+
+It does **not** define adjacency or physics by itself; those come from **S** and **L**. Cartesian is a chart over the substrate, not the substrate.
+
+### Future layered/simplex view (placeholder)
+
+There is a natural view that works closer to the kernel:
+
+- Primary objects are **layers** of simplex-connected points (e.g., hexagonal layers in 3D) and the **tetrahedral connections** between them.
+- FCC vs HCP appears as different constraints on allowable layer sequences (ABC… vs AB…).
+- This view would make it easy to reason about stacking faults, phase boundaries, and other phenomena where the sequence of layers matters.
+
+We acknowledge this **layered/simplex view** as a target for future work. It will be fully specified in a later REFERENCE-PRISMAL document once the S and L structures are stable and implemented.
+
+## B – Behavior Profiles (Material Classes)
+
+### Slip systems and local constraints
+
+Different **material classes** emerge not just from geometry, but from which motions are allowed across that geometry. Over a fixed realization **L** of **S**, we define **behavior profiles** that constrain:
+
+- Which planes are treated as “slip planes” or preferred directions of motion.
+- Which directions within those planes correspond to low-energy displacements.
+- How anisotropic or isotropic responses are to applied stresses or influences.
+
+In physical materials:
+
+- FCC structures typically have many equivalent slip systems and behave more ductile and isotropic.
+- HCP structures have fewer equivalent slip systems and show more anisotropic behavior.
+
+In Prismal Space, we encode these differences as **policies over S/L**, not as different substrates.
+
+### Material classes as profiles over S/L
+
+We define a **behavior profile** as:
+
+> A named, structured set of constraints and rules on top of **S** and **L** that determines which simplices, planes, and directions are available for particular classes of operations (e.g., slip, diffusion, propagation).
 
 Examples:
 
-- tetrahedral sites
-- octahedral sites
+- An “FCC-like” profile that exposes a rich family of close-packed planes and directions.
+- An “HCP-like” profile that restricts motion to a smaller family, inducing anisotropy.
+- A “BCC-like” profile that uses a different pattern of preferred directions, even though the underlying substrate is still the FCC realization for now.
 
-## Selection Model
+REFERENCE-PRISMAL-003 does not catalog all such profiles; it only establishes that:
 
-Selection is the operation that maps a substrate into a view.
+- They are expressed **over** the substrate kernel **S** and its realizations.
+- They do **not** require changing the underlying S or L in the initial implementation.
+- A dedicated materials-focused REFERENCE will formalize these profiles.
 
-In minimal form:
+## Open Questions and Follow-On REFERENCE Docs
 
-`Selection(Substrate, Primitive, Rule) -> View`
+This document intentionally leaves several areas to be developed in follow-up work:
 
-Selection takes a substrate together with a choice of primitive and rule set, then produces a view that interprets the same underlying structure.
+- **Higher-D realizations of S (REFERENCE-PRISMAL-004)**
+  - Full specifications of D4, E8, and Leech lattice realizations.
+  - Their associated views and behavior profiles.
 
-The substrate supplies available relationships.
+- **Layered/simplex view (future REFERENCE)**
+  - A formal definition of the layer/stacking-centric view that makes FCC vs HCP (and other Barlow stackings) first-class parameters.
 
-The primitive identifies the kind of element to foreground.
+- **Material behavior catalog (future REFERENCE)**
+  - A structured list of behavior profiles (FCC-like, HCP-like, BCC-like, etc.) and their implementations over S/L.
+  - How these profiles interact with agents and systems.
 
-The rule identifies which elements or relationships participate in the resulting view.
+- **Implementation guidelines (ARCHITECTURE docs)**
+  - How the S/L/V/B structure maps onto concrete data structures and APIs.
+  - How to preserve the substrate invariants when extending or optimizing the code.
 
-Selection rules may operate over:
-
-- coordinates
-- parity relationships
-- offsets
-- adjacency
-- incidence
-- constraints
-- context
-
-This framing is intended to make selection first-class without yet deciding how selection is represented in runtime systems.
-
-## Lattice Views (Derived)
-
-Named lattice structures can be treated as derived views when they can be produced by selecting primitives and applying rules over a substrate.
-
-This does not mean every lattice view is always lossless, interchangeable, or equally useful. It means the relationship between views can be made explicit instead of hidden behind separate names.
-
-### Simple Cubic (SC)
-
-A simple cubic view may be produced by selecting all points in an integer-grid substrate:
-
-`(x, y, z) in Z^3`
-
-### Body-Centered Cubic (BCC)
-
-A body-centered cubic view may be produced by applying parity or offset rules, for example:
-
-- integer points plus `(1/2, 1/2, 1/2)`
-- parity-constrained coordinate subsets
-
-### Face-Centered Cubic (FCC)
-
-A face-centered cubic view may be produced by selecting points whose coordinate parity aligns under an appropriate scaling or embedding.
-
-### Derived Structures
-
-Additional structures may arise from alternative selection rules.
-
-Examples include:
-
-- interstitial lattices
-- multi-basis lattices such as diamond cubic
-
-## Duality and Equivalence
-
-Many named lattices are dual or equivalent representations under different primitive selections.
-
-Examples:
-
-- FCC as a vertex view and rhombic dodecahedral tiling as a cell view
-- FCC and BCC as duals through Voronoi and Delaunay relationships
-
-These may often be understood not as wholly separate systems, but as different projections or selections over related structure.
-
-## Implications
-
-### Simulation
-
-Simulation systems may be able to operate over the primitive view best suited to the phenomenon being modeled.
-
-Examples:
-
-- physics may emphasize edges and vertices
-- materials may emphasize cells and interstitials
-- region simulation may emphasize cell adjacency
-
-### Rendering
-
-Rendering may emphasize faces or derived surfaces without making those surfaces the canonical simulation state.
-
-### Coordinate Systems
-
-Coordinate systems may be treated as projections or selection aids rather than as the foundation of the model.
-
-### Runtime Systems
-
-Selection may become a runtime concern if different agents, scales, domains, or systems need different views over the same substrate.
-
-This possibility is not yet an implementation requirement.
-
-## Relationship to Existing Theory
-
-This model aligns with established concepts including:
-
-- Bravais lattices such as SC, BCC, and FCC
-- Voronoi and Delaunay duality
-- cell complexes and combinatorial topology
-
-The main shift here is interpretive: these may be treated as selections over a shared structure rather than as fundamentally isolated systems.
-
-## Minimal Statement
-
-A Prismal lattice may not need to be treated as a distinct foundational structure in itself. It can be understood as a view over a shared substrate defined by primitive selection and selection rules. Common lattices such as SC, BCC, and FCC may be specific instances of this broader model.
-
-## Unresolved Bridge to Prismal Structure
-
-This model is not yet fully connected to Prismal's structural and playable work.
-
-Important bridge questions remain:
-
-- how primitive selection over a lattice relates to authoring primitives such as squares, triangles, cells, panels, or edges
-- whether structural constraints operate as selection rules, operate on already-selected structures, or require a separate layer
-- how static lattice views become assembly processes over time
-- where material behavior enters if the substrate model is primarily topological or geometric
-- what play reveals that the lattice model alone cannot validate
-
-## Open Questions
-
-- What is the minimal substrate required to express the lattice views that Prismal actually needs?
-- When should FCC remain the preferred working substrate over `Z^3` or other alternatives?
-- How should selection rules be encoded for efficient runtime evaluation?
-- What is the minimal representation that preserves continuity across scales?
-- How much, if at all, should this model shape near-term Prismal data structures?
+For now, 003’s job is to cleanly separate and define **S**, **L**, **V**, and **B**, so that each of these follow-on documents has a stable foundation to build on.
 
 ## Notes
 
