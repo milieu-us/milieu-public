@@ -3,7 +3,7 @@
 - **ID:** RECORD-002
 - **Status:** Working Draft
 - **Created:** 2026-04-06
-- **Updated:** 2026-04-06
+- **Updated:** 2026-04-22
 
 ## Intent
 
@@ -207,6 +207,71 @@ Records should be:
 - easy to scan
 - easy to diff
 - easy to parse
+
+## Unicode Character Usage
+
+Use ASCII for content that might be searched or implemented.
+
+Use Unicode only where the symbol itself carries established semantic weight or serves a decorative purpose.
+
+### Allowed Unicode
+
+| Character | Example | Rationale |
+|-----------|---------|-----------|
+| **λ** (lambda) | **λ_0** through **λ_3** | Established math convention (150+ years) |
+| **™** (trademark) | Prismal Space™ | Decorative/aesthetic, not searchable |
+
+### Normalize to ASCII
+
+| Instead of | Use | Rationale |
+|------------|-----|-----------|
+| **Z³** | **Z^3** | Searchable, matches code conventions |
+| **α**, **β**, **γ** for arbitrary variables | **a**, **b**, **c** or descriptive names | Avoidable, adds friction |
+
+### Rule
+
+> Prefer ASCII for semantic content. Reserve Unicode for symbols with established meaning or decorative marks.
+
+## Mathematical Expressions
+
+Use ASCII-first notation for narrative text. Reserve fenced code blocks with `math` language tag for precise formulas.
+
+### Approach
+
+1. **Narrative first**: Define concepts with plain text and bold symbols
+2. **Precision second**: Provide exact formulas in ` ```math ` blocks when needed
+
+### Example
+
+````markdown
+A point **x** in a tetrahedron with vertices **v_0** through **v_3** is defined as a weighted combination of those vertices, where the barycentric weights **λ_0** through **λ_3** sum to 1:
+
+```math
+x = \sum_{i=0}^{3} \lambda_i v_i, \quad \sum_{i=0}^{3} \lambda_i = 1
+```
+````
+
+### Rationale
+
+- **Human readability**: Plain text is scannable without parsing LaTeX
+- **LLM efficiency**: Reduces token overhead for narrative sections
+- **Precision preservation**: Exact formulas remain available for rendering
+- **Searchability**: ASCII terms are grep-friendly
+
+### When to Use Math Blocks
+
+Use ` ```math ` when:
+
+- The exact notation carries semantic weight
+- Summation, integration, or complex operators are required
+- The formula may be rendered to MathML or displayed
+
+Use ASCII in narrative when:
+
+- Simple variable references suffice
+- The concept is explained in prose
+- Search and scan efficiency matters more than notational precision
+- Inline code backticks may be used for short coordinate tuples and simple expressions that do not require full math rendering (e.g., `(1/2, 1/2, 0, 0)`, `x + y + z`)
 
 ## Optional Fields
 
