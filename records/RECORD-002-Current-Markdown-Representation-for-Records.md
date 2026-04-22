@@ -271,6 +271,7 @@ Use ASCII in narrative when:
 - Simple variable references suffice
 - The concept is explained in prose
 - Search and scan efficiency matters more than notational precision
+- Inline code backticks may be used for short coordinate tuples and simple expressions that do not require full math rendering (e.g., `(1/2, 1/2, 0, 0)`, `x + y + z`)
 
 ## Optional Fields
 
