@@ -170,7 +170,7 @@ REFERENCE-PRISMAL-003:
 
 - **Commits** to a kernel definition **S** that is compatible with these higher-D lattices.
 - **Fully specifies** the 3D realization **L_3D** (FCC) and the associated views and behavior profiles.
-- **Defers** the detailed treatment of D4, E8, and the Leech lattice—including their coordinate encodings, views, and higher-D behavior profiles—to **REFERENCE-PRISMAL-004**, which will extend the S/L/V/B pattern into those dimensions.
+- **Defers** the detailed treatment of D4, E8, and the Leech lattice - including their coordinate encodings, views, and higher-D behavior profiles - to **REFERENCE-PRISMAL-004**, which will extend the S/L/V/B pattern into those dimensions.
 
 ## V – Views
 
