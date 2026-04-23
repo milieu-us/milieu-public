@@ -216,6 +216,7 @@ Additionally:
 - REFERENCE-PRISMAL-000 — Current View and Open Questions
 - REFERENCE-PRISMAL-001 — Field, Lattice, and Projection — Working Model
 - REFERENCE-PRISMAL-002 — Structural Constraints, Joinery as Tests, and Playable Assembly
+- REFERENCE-PRISMAL-003 — Unified Lattice, Substrate, and Selection Model
 - REFERENCE-PRISMAL-DEMO-000 — Planet Biome Demo Proposal
 
 ## Notes
