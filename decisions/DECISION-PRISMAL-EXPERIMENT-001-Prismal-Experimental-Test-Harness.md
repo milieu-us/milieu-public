@@ -155,6 +155,16 @@ Dependencies must be surfaced through comparison, not assumed.
 
 ---
 
+## References
+
+RECORD-000 — Milieu Record System
+REFERENCE-PRISMAL-000 — Current View and Open Questions
+REFERENCE-PRISMAL-001 — Field, Lattice, and Projection — Working Model
+REFERENCE-PRISMAL-002 — Structural Constraints, Joinery as Tests, and Playable Assembly
+REFERENCE-PRISMAL-003 — Unified Lattice, Substrate, and Selection Model
+
+---
+
 ## Follow-on
 
 - introduce Functional Test integration when repetition increases
