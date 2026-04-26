@@ -36,6 +36,16 @@ Unless the execution environment explicitly exposes additional context, do not a
 
 If important context may exist elsewhere, ask for it or request that it be added to the repository as an explicit artifact.
 
+## Context Access and Source References
+
+Follow [REFERENCE-AGENTS-002 - Carried Context (Working Concept)](references/REFERENCE-AGENTS-002-Carried-Context-Working-Concept.md) for context access and source reference expectations.
+
+A task is not ready for agent execution unless the agent can inspect the sources required to reason about that task.
+
+When an output depends on carried context, the agent must record the sources and refs used, including repository names and branch, commit, issue, pull request, file, or record identifiers where applicable.
+
+Do not vendor upstream archives into downstream repositories as the default context-delivery mechanism. Prefer explicit repository access, links, refs, and source manifests.
+
 ## Working Assumption
 
 When context is missing, prefer the following interpretation:
