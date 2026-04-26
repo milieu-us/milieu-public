@@ -107,6 +107,16 @@ Examples include:
 
 Carried Context should be legible and useful to human agents, AI agents, and system agents alike.
 
+## Context Access and Source References
+
+A task is not ready for agent execution unless the agent can inspect the sources required to reason about that task.
+
+Agents should be given explicit, permissioned access to the repositories, archives, issues, pull requests, branches, commits, files, records, or other carriers that the task depends on.
+
+When an output depends on carried context, the agent must record the sources and refs used, including repository names and branch, commit, issue, pull request, file, or record identifiers where applicable.
+
+Do not vendor upstream archives into downstream repositories as the default context-delivery mechanism. Prefer explicit repository access, links, refs, and source manifests. Vendored snapshots are appropriate only when the snapshot itself is the artifact under review, test, or preservation.
+
 ## Minimum Useful Contents
 
 The exact form may vary by carrier, but Carried Context usually needs to preserve at least:
