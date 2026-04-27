@@ -1,15 +1,15 @@
-# REFERENCE-PRISMAL-000
+# REFERENCE-PRISMAL-000 - Prismal Space - Current View and Open Questions
 
-## Prismal Space - Current View and Open Questions
-
+- **ID:** REFERENCE-PRISMAL-000
 - **Status:** Working / Provisional Reference
-- **Date:** 2026-04-27
+- **Created:** 2026-04-03
+- **Updated:** 2026-04-27
 - **Scope:** Minimum constraint foundation and long-range simulation representation context for Prismal Space
 - **Related:** Prismal Starter exploration, multi-scale simulation research, REFERENCE-PRISMAL-GEOMETRY-000
 
 ---
 
-# Intent
+## Intent
 
 This Reference Record captures the **current provisional view of Prismal™ and Prismal Space™** as it is presently understood.
 
@@ -23,7 +23,7 @@ Exploration work - including Prismal Starter - will generate evidence that may r
 
 ---
 
-# Scope
+## Scope
 
 This record addresses the **conceptual representation of simulation space across scales**.
 
@@ -50,7 +50,7 @@ Those decisions belong in project-level Decision Records and Architectural Decis
 
 ---
 
-# Minimum Constraint Foundation
+## Minimum Constraint Foundation
 
 Current exploration suggests that Prismal Space should not begin from coordinates, geometry, lattices, cells, or rendering. Those are derived representations or views.
 
@@ -86,7 +86,7 @@ This foundation is provisional. It exists to reduce premature commitment to any 
 
 ---
 
-# Current Provisional View
+## Current Provisional View
 
 Current exploration suggests that **Prismal Space may function as a bounded, observable constraint framework for organizing simulation state, transitions, observations, measures, and derived representations across multiple scales**.
 
@@ -94,11 +94,11 @@ Spatial, lattice, geometric, rendering, energy, information, and computational v
 
 Early work indicates several potential characteristics.
 
-## Multi-scale structure
+### Multi-scale structure
 
 Prismal Space appears suited to representing environments across multiple scale bands, ranging from human-scale interaction outward toward planetary or cosmic contexts and inward toward finer molecular, atomic, and quantum structures. We leave open the possibility the space may wrap around with yet unknown structures between Cosmic and Quantum.
 
-## Candidate reference structures
+### Candidate reference structures
 
 Early investigation suggests that some lattice and cell relationships may provide useful neighborhood, packing, alignment, and multi-scale organization properties.
 
@@ -106,13 +106,13 @@ Face-centered cubic relationships and rhombic dodecahedron cells remain importan
 
 Any candidate reference structure should be evaluated as a constraint family, measure space, embedding, authoring aid, or derived view rather than as the root ontology.
 
-## Reference structure rather than ultimate reality
+### Reference structure rather than ultimate reality
 
 A lattice representation should be treated as **one possible reference structure for organizing simulation**, not as the root definition of Prismal Space and not as a claim that physical reality must conform exactly to the lattice.
 
 Fields, flows, objects, and social constructs may cross, span, or ignore lattice boundaries.
 
-## Multiple representations may coexist
+### Multiple representations may coexist
 
 Simulation environments will likely involve several overlapping representations, including:
 
@@ -133,17 +133,17 @@ Prismal Space should not be reduced to any single representation layer. Lattice-
 
 ---
 
-# Durable Constraints We Suspect Matter
+## Durable Constraints We Suspect Matter
 
 Early exploration suggests several pressures that appear likely to remain relevant across projects. These should be treated as **guiding concerns**, not rigid rules.
 
-## Representation is not the world
+### Representation is not the world
 
 Spatial reference structures help organize simulation and computation but should not be mistaken for the complete ontology of the simulated world.
 
 Different phenomena may cross and/or span reference boundaries freely.
 
-## Multi-scale coherence
+### Multi-scale coherence
 
 The representation should support both:
 
@@ -152,7 +152,7 @@ The representation should support both:
 
 Ideally these operations preserve meaningful relationships across scale bands.
 
-## Relations and neighborhoods are fundamental
+### Relations and neighborhoods are fundamental
 
 Stable relation families appear central to many simulation tasks. Neighborhood relations are especially useful derived relations, but they should not be assumed to be purely geometric or spatial.
 
@@ -169,17 +169,17 @@ Relevant relation families may support:
 
 Structures that preserve consistent relation logic across scales may offer strong advantages.
 
-## Alignment legibility for authors
+### Alignment legibility for authors
 
 Builders, designers, and tool users must be able to **reason about alignment and placement**.
 
 Representations that are mathematically elegant but difficult to interpret may create long-term usability challenges.
 
-## Discrete composition may be preferable to ad-hoc correction
+### Discrete composition may be preferable to ad-hoc correction
 
 Where possible, lawful composition from discrete units may reduce the need for compensating geometry or alignment hacks.
 
-## Multiple authorities for different truths
+### Multiple authorities for different truths
 
 Different aspects of the world may require different authoritative sources, including:
 
@@ -192,7 +192,7 @@ Different aspects of the world may require different authoritative sources, incl
 
 These truths may overlap spatially but need not share the same storage model or update cadence.
 
-## Stable identity with derived local reference frames
+### Stable identity with derived local reference frames
 
 Any candidate indexing scheme should distinguish stable canonical identity from derived local reference frames used for computation, rendering, storage, or authoring.
 
@@ -206,19 +206,19 @@ This implies:
 
 This concern is independent of any specific runtime or engine implementation.
 
-## Rendering representation should not become canonical identity
+### Rendering representation should not become canonical identity
 
 Meshes, textures, and shaders are presentation layers. They should not become the canonical definition of simulation state.
 
 ---
 
-# Questions Active Explorations Should Help Answer
+## Questions Active Explorations Should Help Answer
 
 Several important questions remain unresolved.
 
 Exploration projects, including Prismal Starter, are expected to provide evidence that helps answer them.
 
-## What constitutes canonical identity?
+### What constitutes canonical identity?
 
 Possible candidates include:
 
@@ -233,7 +233,7 @@ Possible candidates include:
 
 The system may ultimately require more than one identity layer. Spatial identity may be one such layer, but it should not be assumed to be the root identity layer.
 
-## Which aspects of candidate reference structures are canonical, derived, or provisional?
+### Which aspects of candidate reference structures are canonical, derived, or provisional?
 
 It remains unclear which candidate structure properties should be treated as:
 
@@ -244,7 +244,7 @@ It remains unclear which candidate structure properties should be treated as:
 - authoring guidance
 - temporary exploration scaffold
 
-## How should scale bands compose and decompose?
+### How should scale bands compose and decompose?
 
 Questions include:
 
@@ -252,11 +252,11 @@ Questions include:
 - whether boundaries align across bands
 - how simulation meaning is preserved when transitioning between scales
 
-## What relation rules remain stable across scales?
+### What relation rules remain stable across scales?
 
 Certain adjacency or neighborhood rules may hold consistently across levels, while others may require translation. Other non-spatial relation families may also need stable cross-scale behavior.
 
-## How many representation layers are required in practice?
+### How many representation layers are required in practice?
 
 Candidate layers include:
 
@@ -271,23 +271,23 @@ Candidate layers include:
 
 Exploration will reveal which layers are necessary.
 
-## What should be stored as authoritative state?
+### What should be stored as authoritative state?
 
 Some structures may exist only as derived views. Others must be persisted as canonical simulation state.
 
 Understanding this boundary is important for distributed simulation and persistence.
 
-## How should rotation freedom be exposed to authors?
+### How should rotation freedom be exposed to authors?
 
 Placement flexibility introduces complexity in alignment reasoning. The system may require explicit rotation sets or policies to keep builder expectations clear.
 
-## Where do existing engine assumptions help or hinder?
+### Where do existing engine assumptions help or hinder?
 
 Existing engines and tools may provide strong capabilities but may also embed assumptions (for example, surface-centric geometry or Cartesian partitioning) that interact with Prismal Space in complex ways.
 
 ---
 
-# Expected Sources of Evidence
+## Expected Sources of Evidence
 
 Evidence informing this record may emerge from multiple exploration efforts, including:
 
@@ -304,7 +304,7 @@ Findings from these efforts should be referenced in project-level Decision Recor
 
 ---
 
-# Relationship to Project-Level Records
+## Relationship to Project-Level Records
 
 Projects such as Prismal Starter will produce their own Decision Records and Architectural Decision Records describing local implementation choices.
 
@@ -320,7 +320,7 @@ Project records should reference this document where relevant, especially when a
 
 ---
 
-# Consequences
+## Consequences
 
 Maintaining a provisional big-picture record allows:
 
@@ -333,7 +333,7 @@ This record should evolve as new insights emerge.
 
 ---
 
-# Review Triggers
+## Review Triggers
 
 This record should be revisited when significant findings occur, including:
 
@@ -345,7 +345,7 @@ This record should be revisited when significant findings occur, including:
 
 ---
 
-# Addendum A - Multiple Views of Simulation
+## Addendum A - Multiple Views of Simulation
 
 Prismal Space is currently better understood as a **bounded, observable constraint system** that may support multiple derived views of simulation.
 
@@ -357,7 +357,7 @@ This addendum is explanatory and provisional. It does not yet define a formal ar
 
 ---
 
-# Summary
+## Summary
 
 Prismal Space currently appears to be a **multi-scale constraint framework** that may support coherent simulation across bands of scale through bounded states, checkable constraints, lawful transitions, explicit observations, declared measures, and derived representations.
 
