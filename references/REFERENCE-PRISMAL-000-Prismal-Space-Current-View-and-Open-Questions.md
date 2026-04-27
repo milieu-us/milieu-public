@@ -2,10 +2,10 @@
 
 ## Prismal Space - Current View and Open Questions
 
--**Status:** Working / Provisional Reference
--**Date:** 2026-04-27
--**Scope:** Minimum constraint foundation and long-range simulation representation context for Prismal Space
--**Related:** Prismal Starter exploration, multi-scale simulation research, REFERENCE-PRISMAL-GEOMETRY-000
+- **Status:** Working / Provisional Reference
+- **Date:** 2026-04-27
+- **Scope:** Minimum constraint foundation and long-range simulation representation context for Prismal Space
+- **Related:** Prismal Starter exploration, multi-scale simulation research, REFERENCE-PRISMAL-GEOMETRY-000
 
 ---
 
