@@ -2,7 +2,7 @@
 
 - **ID:** REFERENCE-PRISMAL-000
 - **Status:** Working / Provisional Reference
-- **Created:** 2026-04-03
+- **Created:** 2026-03-06
 - **Updated:** 2026-04-27
 - **Scope:** Minimum constraint foundation and long-range simulation representation context for Prismal Space
 - **Related:** Prismal Starter exploration, multi-scale simulation research, REFERENCE-PRISMAL-GEOMETRY-000
