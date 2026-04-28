@@ -8,6 +8,10 @@ This file exists to reduce hidden context, especially when work is distributed a
 
 Initial version drafted collaboratively by Chris at Milieu and Codex GPT-5.4 on 2026-04-02.
 
+### First Principle
+
+Prismal Space does not exist to prove its axioms. It exists to provide adaptive spaces where working axioms are tested, refined, replaced, and made visible through play, observation, implementation, and shared review.
+
 ## Coordination Context
 
 Milieu work may be orchestrated across multiple contexts and tools by a group of agents, including:
