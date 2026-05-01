@@ -3,7 +3,7 @@
 - **ID:** REFERENCE-PRISMAL-GEOMETRY-001
 - **Status:** Working Draft
 - **Created:** 2026-04-27
-- **Updated:** 2026-04-27
+- **Updated:** 2026-05-01
 
 ## Intent
 
@@ -21,11 +21,11 @@ This distinction matters for current Prismal work because earlier geometry discu
 
 ## Provisional Claim
 
-The current provisional starting point for 3D Prismal geometry is the tetrad: four mutually touching equal sphere centers forming a regular tetrahedral simplex.
+The current provisional starting point for 3D Prismal geometry is the Prismal Tetrad: four mutually touching equal sphere centers forming a regular tetrahedral simplex.
 
 From this point of view:
 
-- The tetrad is a local relational primitive.
+- The Prismal Tetrad is a local relational primitive.
 - A simplex complex is one way to preserve local adjacency and incidence.
 - Barlow packings are global close-packed stacking sequences that can be generated from repeated local choices.
 - Face Centered Cubic and Hexagonal Close Packing are regular global realizations within that close-packed family.
@@ -37,11 +37,21 @@ This is a research framing, not an implementation decision.
 
 ### Local Relation Is Not Global Lattice
 
-A tetrad describes a local relation among four mutually adjacent sphere centers.
+A Prismal Tetrad describes a local relation among four mutually adjacent sphere centers.
 
 A lattice describes a global regular repetition pattern.
 
 The same local tetrahedral relation can appear inside different global structures. Face Centered Cubic and Hexagonal Close Packing share the same close-packed local motif, while differing in layer stacking and global symmetry.
+
+### Regular Kissing Tetrad Is Not Any Tetrahedral Cell
+
+The Prismal Tetrad is a regular kissing simplex: four equal spheres, all mutually touching, with six equal contact edges among their centers.
+
+Some lattice decompositions use tetrahedral cells in the weaker simplex sense of four non-coplanar points. Those cells may be irregular, may contain non-contact edges, or may connect points that are not nearest neighbors. Such cells should not be treated as Prismal Tetrads unless all six edges are equal nearest-neighbor sphere contacts.
+
+Body Centered Cubic and simple cubic coordinate scaffolds can contain tetrahedral cells, and a cubic scaffold can contain regular tetrahedral point subconfigurations. That does not mean those tetrahedra are the nearest-neighbor contact primitive of the structure.
+
+For example, a cube contains a regular tetrahedron if alternating corners are chosen. If Body Centered Cubic spheres are sized for nearest-neighbor contact between cube corners and body centers, those alternating cube-corner edges are not the contact edges. Enlarging those spheres until the alternating cube corners touch would overlap the body-center spheres.
 
 ### Lattice Is Not Coordinate System
 
@@ -65,11 +75,13 @@ Those profiles may be Face Centered Cubic-like, Hexagonal Close Packing-like, Bo
 
 ## Working Terms
 
-### Tetrad
+### Prismal Tetrad
 
 A local 3D relation among four mutually touching equal spheres. The four sphere centers form a regular tetrahedron.
 
-In this record, tetrad names the local relational motif, not a global lattice.
+Equivalently, the Prismal Tetrad is a regular kissing simplex: all four spheres touch all three of the others, and the six center-to-center contact edges are equal.
+
+In this record, Prismal Tetrad names the local relational motif, not a global lattice.
 
 ### Simplex
 
@@ -79,7 +91,9 @@ The minimal non-degenerate shape in a given dimension.
 - In 2D: a triangle.
 - In 3D: a tetrahedron.
 
-The tetrad is the 3D simplex motif relevant to local close packing.
+The Prismal Tetrad is the 3D regular kissing simplex motif relevant to local close packing.
+
+Not every tetrahedral simplex in a lattice decomposition is a Prismal Tetrad.
 
 ### Simplex Complex
 
@@ -155,7 +169,11 @@ Body Centered Cubic is useful as a comparison structure and may be available nat
 
 However, Body Centered Cubic is not a Barlow close packing and does not share the same local 12-neighbor close-packed sphere arrangement as Face Centered Cubic or Hexagonal Close Packing.
 
-For Prismal, this means Body Centered Cubic is probably not the hard unification problem. The harder problem is preserving the distinction between local tetrad relations, Face Centered Cubic global stacking, Hexagonal Close Packing global stacking, and broader Barlow sequences.
+Body Centered Cubic nearest-neighbor contacts occur between cube-corner and body-center sublattices. That nearest-neighbor contact graph is bipartite, so it does not contain the triangular contact loops or four-sphere complete contact graph required by a Prismal Tetrad.
+
+Body Centered Cubic may contain tetrahedral decomposition cells or regular tetrahedral point subconfigurations when viewed through a cubic scaffold. Those are not Prismal Tetrads unless they are also regular nearest-neighbor kissing relations.
+
+For Prismal, this means Body Centered Cubic is probably not the hard unification problem. The harder problem is preserving the distinction between local Prismal Tetrad relations, Face Centered Cubic global stacking, Hexagonal Close Packing global stacking, and broader Barlow sequences.
 
 ### Cubic Parity Scaffold
 
@@ -186,9 +204,11 @@ Because the first neighbor shell is the same size and very similar, the distingu
 
 ### Tetrad Growth Rule
 
-Can a tetrad-first growth rule generate useful local test cases without committing to a full global lattice?
+Can a Prismal Tetrad-first growth rule generate useful local test cases without committing to a full global lattice?
 
-A useful test may begin with one tetrahedral simplex, then add spheres into available tetrahedral voids while recording which choices lead toward ABCABC, ABAB, or other Barlow sequences.
+A useful test may begin with one regular kissing simplex, then add spheres into available tetrahedral voids while recording which choices lead toward ABCABC, ABAB, or other Barlow sequences.
+
+Treating the three contact edges of one Prismal Tetrad as translation generators is a separate lattice commitment. That commitment produces Face Centered Cubic, but it should not be confused with the local Prismal Tetrad relation itself.
 
 ### Integer and Rational Test Vectors
 
@@ -230,13 +250,14 @@ The test harness should make assumptions visible rather than hiding them behind 
 
 Candidate scenes or toggles:
 
-- Show one tetrad as the local 3D simplex motif.
+- Show one Prismal Tetrad as the local 3D regular kissing simplex motif.
 - Grow a small cluster by adding spheres into tetrahedral voids.
 - Show triangular close-packed layers with A, B, and C offset positions.
 - Compare ABCABC and ABAB stacking.
 - Show Face Centered Cubic and Hexagonal Close Packing clusters with layer coloring.
 - Show why first-neighbor shells alone may not distinguish stacking context.
 - Show the cubic parity scaffold separately, with Face Centered Cubic and Body Centered Cubic toggles.
+- Show regular tetrahedral point subconfigurations in a cubic scaffold separately from nearest-neighbor kissing tetrads.
 - Show the rhombic dodecahedron Voronoi cell view for Face Centered Cubic.
 
 The goal is not only to render attractive geometry. The goal is to make the consequences of each representation observable.
@@ -245,7 +266,7 @@ The goal is not only to render attractive geometry. The goal is to make the cons
 
 REFERENCE-PRISMAL-003 defines the current S/L/V/B framing: substrate kernel, lattice realizations, views, and behavior profiles.
 
-This record is a geometry research companion to that framing. It focuses on the local simplex/tetrad starting point and the distinction between close-packed layer families and cubic reference views.
+This record is a geometry research companion to that framing. It focuses on the local Prismal Tetrad starting point and the distinction between close-packed layer families and cubic reference views.
 
 REFERENCE-PRISMAL-GEOMETRY-000 derives sphere and void metrics for Face Centered Cubic and higher-dimensional lattice families. This record does not replace that derivation. It asks how the 3D local and stacking relationships should be represented before finalizing implementation choices.
 
@@ -260,10 +281,10 @@ This record was drafted using the following visible repository sources:
 - `references/REFERENCE-PRISMAL-003-Unified-Lattice-Substrate-and-Selection-Model.md` at `main`, fetched 2026-04-27.
 - `references/REFERENCE-PRISMAL-GEOMETRY-000-Sphere-Geometry-Derivation.md` at `main`, fetched 2026-04-27.
 
-It also incorporates carried discussion context from the current Prismal Space conversation about tetrads, Face Centered Cubic, Hexagonal Close Packing, Body Centered Cubic, cubic parity scaffolds, and Barlow stackings. That carried context should be treated as provisional unless later captured in repository-visible issues, pull requests, or records.
+It also incorporates carried discussion context from the current Prismal Space conversation about Prismal Tetrads, regular kissing simplices, Face Centered Cubic, Hexagonal Close Packing, Body Centered Cubic, cubic parity scaffolds, and Barlow stackings. That carried context should be treated as provisional unless later captured in repository-visible issues, pull requests, or records.
 
 ## Notes
 
 This document intentionally avoids choosing a final coordinate model.
 
-The immediate research task is to keep the local tetrad, close-packed layer stackings, lattice realizations, coordinate views, and behavior profiles distinguishable long enough for implementation evidence to matter.
+The immediate research task is to keep the local Prismal Tetrad, close-packed layer stackings, lattice realizations, coordinate views, and behavior profiles distinguishable long enough for implementation evidence to matter.
